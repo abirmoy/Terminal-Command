@@ -1,0 +1,164 @@
+@author: qxz0ga0
+Alam.Abir@partner.bmw.com
+
+######## INSTALL DOWNLOAD PACKAGE FROM VS CODE TERMINAL #########
+
+cd \file location
+python setup.py install --user
+
+
+
+
+
+#### SOME PIP COMMAND ####
+
+# Requirements File #
+pip freeze > requirements.txt
+pip install -r requirements.txt
+
+
+#installed package list #
+pip freeze
+pip list
+
+# UPGRADE PIP VERSION #
+pip install --upgrade pip
+python -m pip install --upgrade pip
+
+# FLASK DATABASE #
+pip install flask-sqlalchemy
+pip install flask-migrate
+flask db init
+flask db migrate -m "users table"
+flask db upgrade
+flask db downgrade
+
+
+
+
+
+
+
+
+######## CREATING VIRTUAL ENVIRONMENT #############
+conda config --set auto_activate_base false
+
+@cmd
+### METHOD 1 (Works well) ###
+mkdir name_of_folder #creates new folder
+cd name_of_folder
+virtualenv venv_or_any_name 
+# OR
+python -m venv venv
+cd venv_or_any_name\Scripts\activate(or activate.bat)
+deactivate #for deactivating from anywhere
+
+### METHOD 2 ###
+cd project_directory
+pip install virtualenv
+python -m venv name_of_venv
+project_directory> cd name_of_venv\Scripts
+Scripts>activate.bat
+deactivate #for deactivating from anywhere
+
+
+
+
+
+
+
+#### RUNNING FLASK ####
+
+flask run     #FOR RUNNING FLASK SERVER
+set FLASK_APP=microblog.py      #FLASK_APP ENVIRONMENT VARIABLE
+
+
+
+
+
+###### RUNNING PYTHON SCRIPTS FORM TERMINAL #####
+
+python app.py run
+
+
+
+
+#### PLAY WITH FLASK DB IN SHELL #####
+>>> from app import db
+>>> from app.models import User, Post
+>>> users = User.query.all()
+>>> users
+[<User john>, <User susan>]
+>>> for u in users:
+...     print(u.id, u.username)
+...
+1 john
+2 susan
+
+>>> u = User.query.get(1)
+>>> u
+<User john>
+
+>>> u = User.query.get(1)
+>>> p = Post(body='my first post!', author=u)
+>>> db.session.add(p)
+>>> db.session.commit()
+
+>>> # get all posts written by a user
+>>> u = User.query.get(1)
+>>> u
+<User john>
+>>> posts = u.posts.all()
+>>> posts
+[<Post my first post!>]
+
+>>> # same, but with a user that has no posts
+>>> u = User.query.get(2)
+>>> u
+<User susan>
+>>> u.posts.all()
+[]
+
+>>> # print post author and body for all posts 
+>>> posts = Post.query.all()
+>>> for p in posts:
+...     print(p.id, p.author.username, p.body)
+...
+1 john my first post!
+
+# get all users in reverse alphabetical order
+>>> User.query.order_by(User.username.desc()).all()
+[<User susan>, <User john>]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'''
+Since environment variables aren't remembered across terminal sessions, 
+you may find tedious to always have to set the FLASK_APP environment variable when you open a new terminal window. 
+Starting with version 1.0, Flask allows you to register environment variables that you want to be automatically imported when you 
+run the flask command. To use this option you have to install the python-dotenv package:
+
+(venv) $ pip install python-dotenv
+Then you can just write the environment variable name and value in a .flaskenv file in the top-level directory of the project:
+
+.flaskenv: Environment variables for flask command
+
+FLASK_APP=microblog.py
+Doing this is optional. If you prefer to set the environment variable manually, that is perfectly fine, as long as you always 
+remember to do it.
+'''
+

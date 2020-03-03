@@ -1,0 +1,154 @@
+### CHECK RUNING PROCESS ###
+
+service <name of the app> <start, stop, restart, status>          # i.e service ssh start
+ps aux                                                            # all process list
+ps -ax|grep cron                                                  # cronjobs process list
+crontab -l                                                        # lists cronjobs
+kill <pid>                                                        # killes process
+
+
+
+### VIM COMMAND ###
+
+:wq       # to save and exit
+:q!       # to trash all changes
+SHIFT I   # to insert
+SHIFT Q   # to quit
+
+
+
+### LINUX COMMAND ###
+
+<anything> --help                               # for help
+pwd                                             # present working directory
+ls                                              # list of files and folders
+locate <name>                                   # locate files 
+ifconfig                                        # ip related information
+uname                                           # destro name
+uname -a                                        # details of destro
+shutdown                                        # shutdown after 1 minute
+shutdown -c                                     # cancle shutdown
+
+# SWITCHING USER-ROOT #
+whoami                                          # check current username
+su - <username>                                 # switch to another user i.e su - user2
+sudo -i                                         # switch to <root@linlin-mintOS>
+sudo su <username>                              # i.e sudo su linlin switch back to linlin $exit, $logout also works
+sudo sh                                         # login as root
+$ exit                                          # exit from root
+$ logout                                        # logout of root  
+
+# INSTALL #
+which <name of the package>                     # check if package is installed
+apt search <name of the package>                # i.e apt search firefox (better than apt-cache)
+sudo apt-cache search <name of the package>     # i.e sudo apt-cache search firefox
+# UNINSTALL #
+sudo apt remove <name of the package>           # i.e sudo apt remove firefox
+
+
+
+### SETTING UP PUTTY ###
+1.
+sudo apt-get install openssh-server   # Switch to bridged networking mode, make that change in the Virtual Machine Control Panel (Edit > Virtual Machine Settings)
+
+2. START SSH
+service ssh start
+
+3. CHECK IP & COPY IP
+ifconfig
+
+### SETTING UP REMOTE DESKTOP WINDOWS-->UBUNTU ###
+
+1.
+sudo apt install xrdp
+2.
+sudo systemctl enable xrdp
+3.
+Open Remote Desktop in Windows Enter IP of followed by Username and Password of Ubuntu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,8 @@
+## DIRECTORY
+docker container exec -it <container-id> ls <path-to-directory>
+
+docker exec -it containerId /bin/bash
+OR if bash not present:
+docker exec -it containerId /bin/sh
+Note: -it means internactive terminal, so you get the terminal inside the container. 
+You will see your terminal cursor [~]$ change once you switch to container terminal
