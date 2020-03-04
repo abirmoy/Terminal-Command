@@ -1,7 +1,7 @@
-# CAPITALIZE WORD
+### CAPITALIZE WORD ###
 
-string.capwords('pass the string here') # converts 1st latter of every word to uppercase
-.upper()          # converts each latter uppercase
-.lower()          # converts each latter lowercase
-.capitalize()     # converts 1st latter of a string uppercase
-.title()          #"e g 3b".title() returns "E G 3B";  better use string.capwords
+.upper()                                                    # converts each latter uppercase
+.lower()                                                    # converts each latter lowercase
+.capitalize()                                               # converts 1st latter of a string uppercase
+.title()                                                    #"e g 3b".title() returns "E G 3B";  better use string.capwords
+string.capwords('pass the string here')                     # converts 1st latter of every word to uppercase

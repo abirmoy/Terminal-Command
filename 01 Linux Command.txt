@@ -20,14 +20,33 @@ SHIFT Q   # to quit
 ### LINUX COMMAND ###
 
 <anything> --help                               # for help
-pwd                                             # present working directory
-ls                                              # list of files and folders
+whatis <name of a command>                      # i.e whatis pwd will show information about the command pwd
+history                                         # prints the 1000 unique command history
 locate <name>                                   # locate files 
 ifconfig                                        # ip related information
 uname                                           # destro name
 uname -a                                        # details of destro
 shutdown                                        # shutdown after 1 minute
 shutdown -c                                     # cancle shutdown
+
+# DIRECTORY #
+cd                                              # change directory
+mkdir                                           # make directory
+pwd                                             # present working directory
+ls                                              # list of files and folders
+ls -a                                           # list along with hidden files
+ls -all                                         # list along with permission type
+
+# CUT COPY MOVE RENAME #
+
+# DELETE FILE FOLDERS #
+-r : Remove directories and their contents recursively
+-f : Force option i.e. ignore nonexistent files and arguments, never prompt
+-v : Verbose option
+rm /home/vivek/data/*                           # To delete all files in a directory named /home/vivek/data/
+rm -v /home/vivek/data/*                        # To see what is being done when deliting
+rmdir <directory name>                          # i.e rmdir abir deletes abir
+rm -rfv /home/vivek/data/                       # deletes all files folders from a directory
 
 # SWITCHING USER-ROOT #
 whoami                                          # check current username
@@ -45,13 +64,7 @@ sudo apt-cache search <name of the package>     # i.e sudo apt-cache search fire
 # UNINSTALL #
 sudo apt remove <name of the package>           # i.e sudo apt remove firefox
 
-# DELETE FILE FOLDERS #
--r : Remove directories and their contents recursively
--f : Force option i.e. ignore nonexistent files and arguments, never prompt
--v : Verbose option
-rm /home/vivek/data/*                           # To delete all files in a directory named /home/vivek/data/
-rm -v /home/vivek/data/*                        # To see what is being done when deliting
-rm -rfv /home/vivek/data/                       # deletes all files folders from a directory
+
 
 
 ### SETTING UP PUTTY ###
