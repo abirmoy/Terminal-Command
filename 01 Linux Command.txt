@@ -29,7 +29,8 @@ uname -a                                        # details of destro
 shutdown                                        # shutdown after 1 minute
 shutdown -c                                     # cancle shutdown
 
-# DIRECTORY #
+# DIRECTORY & FILE #
+touch <file name>                               # i.e $touch test.sh creates a file name test.sh
 cd                                              # change directory
 mkdir                                           # make directory
 pwd                                             # present working directory
