@@ -52,9 +52,10 @@ rm -rfv /home/vivek/data/                       # deletes all files folders from
 # SWITCHING USER-ROOT #
 whoami                                          # check current username
 su - <username>                                 # switch to another user i.e $su - user2
-sudo -i                                         # switch to <root@linlin-mintOS>
-sudo su <username>                              # i.e $sudo su linlin; switch back to linlin $exit, $logout also works
-sudo sh                                         # login as root
+sudo -i                                         # switch to <root@linlin-mintOS#> $pwd ->root
+sudo -s                                         # switch to <root@linlin-mintOS#> $pwd ->/home/linlin
+sudo sh                                         # login as root switches to <#> $pwd ->/home/linlin
+sudo su <username>                              # i.e $sudo su linlin; switch back to othruser $exit, $logout also works
 $ exit                                          # exit from root
 $ logout                                        # logout of root  
 
