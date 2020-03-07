@@ -1,11 +1,12 @@
 ### CHECK RUNING PROCESS ###
 
+watch free -h                                                     # check performance
 service <name of the app> <start, stop, restart, status>          # i.e service ssh start
 ps aux                                                            # all process list
 ps -ax|grep cron                                                  # cronjobs process list
 crontab -l                                                        # lists cronjobs
+killall <programname>                                             # i.e $killall firefox; killes all firefox process
 kill <pid>                                                        # killes process
-
 
 
 ### VIM COMMAND ###
@@ -20,7 +21,7 @@ SHIFT Q   # to quit
 ### LINUX COMMAND ###
 
 <anything> --help                               # for help
-whatis <name of a command>                      # i.e whatis pwd will show information about the command pwd
+whatis <name of a command>                      # i.e $whatis pwd will show information about the command pwd
 history                                         # prints the 1000 unique command history
 locate <name>                                   # locate files 
 ifconfig                                        # ip related information
@@ -46,7 +47,7 @@ ls -all                                         # list along with permission typ
 -v : Verbose option
 rm /home/vivek/data/*                           # To delete all files in a directory named /home/vivek/data/
 rm -v /home/vivek/data/*                        # To see what is being done when deliting
-rmdir <directory name>                          # i.e rmdir abir deletes abir
+rmdir <directory name>                          # i.e $rmdir abir deletes abir
 rm -rfv /home/vivek/data/                       # deletes all files folders from a directory
 
 # SWITCHING USER-ROOT #
@@ -60,12 +61,19 @@ $ exit                                          # exit from root
 $ logout                                        # logout of root  
 
 # INSTALL #
+sudo apt update & sudo apt upgrade              # update package manager
 which <name of the package>                     # check if package is installed
 apt search <name of the package>                # i.e $apt search firefox (better than apt-cache)
 sudo apt-cache search <name of the package>     # i.e $sudo apt-cache search firefox
 # UNINSTALL #
 sudo apt remove <name of the package>           # i.e $sudo apt remove firefox
 
+
+### SHORTCUT ###
+
+clt+alt+d                                       # open new terminal window
+clt+d                                           # close the terminal
+clt+c                                           # get out of any continous process in the terminal
 
 
 

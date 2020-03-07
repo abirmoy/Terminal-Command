@@ -1,10 +1,32 @@
-### CAPITALIZE WORD ###
-
+### STRING ###
+# CAPITALIZE WORD #
 .upper()                                                    # converts each latter uppercase
 .lower()                                                    # converts each latter lowercase
 .capitalize()                                               # converts 1st latter of a string uppercase
 .title()                                                    #"e g 3b".title() returns "E G 3B";  better use string.capwords
 string.capwords('pass the string here')                     # converts 1st latter of every word to uppercase
+
+### LIST ###
+'''
+    Should be careful while iterating over a list. It's good practice to clone the list before iterating 
+    ex. 
+    a_list = [x,x,x,x]
+    a_list_copy = a[:] # NOTE a_list_copy = a_list is not cloning and it could be dangerous
+'''
+
+.append(something)
+.sort()                                                     # mutates returns nothing
+sorted(a_List)                                              # doesn't mutate
+.reverse()                                                  # mutates
+list(something)                                             # doesn't mutate ie. s='abcd'; list(s);->['a','b','c']
+.split('some_string')                                       # returns list, doesn't mutate ie. s='ab>qcd'; s.split('>');->['ab','qcd']
+.join(a_List)                                               # doesn't mutate ie. s=['a','b','c']; '_'.join(s);->'a_b_c'
+.extend([x,x,x])                                            # mutates and extends a list
+# REMOVE LIST ELEMENT #
+del(aList[index])                                           # remove element at a specific index
+.pop() or .pop(index)                                       # removes element at end alslo suports indexing & RETURNS REMOVED ELEMENT
+.remove(element)                                            # removes a spesific element ie. a =[1,4,3,6]; a.remove(4);->a=[1,3,6]                                                    # 
+
 
 
 ### MATH ###
