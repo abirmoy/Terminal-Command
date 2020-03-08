@@ -9,12 +9,23 @@ killall <programname>                                             # i.e $killall
 kill <pid>                                                        # killes process
 
 
+
+
+
 ### VIM COMMAND ###
 
-:wq       # to save and exit
-:q!       # to trash all changes
-SHIFT I   # to insert
-SHIFT Q   # to quit
+:wq                 # to save and exit
+:q!                 # to trash all changes
+SHIFT I             # to insert
+SHIFT Q             # to quit
+i                   # set to insert mode
+esc                 # escape from insert mode
+set number          # shows line number
+
+
+
+
+
 
 
 
@@ -72,8 +83,14 @@ sudo apt remove <name of the package>           # i.e $sudo apt remove firefox
 ### SHORTCUT ###
 
 clt+alt+d                                       # open new terminal window
+clt+l                                           # clear terminal
 clt+d                                           # close the terminal
 clt+c                                           # get out of any continous process in the terminal
+
+
+
+
+
 
 
 
@@ -99,6 +116,13 @@ service ssh start
 
 3. CHECK IP & COPY IP
 ifconfig
+
+
+
+
+
+
+
 
 ### SETTING UP REMOTE DESKTOP WINDOWS-->UBUNTU ###
 
