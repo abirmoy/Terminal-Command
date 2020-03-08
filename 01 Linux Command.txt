@@ -1,12 +1,14 @@
-### CHECK RUNING PROCESS ###
+### PROCESS ###
 
 watch free -h                                                     # check performance
 service <name of the app> <start, stop, restart, status>          # i.e service ssh start
 ps aux                                                            # all process list
-ps -ax|grep cron                                                  # cronjobs process list
-crontab -l                                                        # lists cronjobs
 killall <programname>                                             # i.e $killall firefox; killes all firefox process
 kill <pid>                                                        # killes process
+
+# CRONJOB #
+ps -ax|grep cron                                                  # cronjobs process list
+crontab -l                                                        # lists cronjobs
 
 
 
@@ -14,13 +16,19 @@ kill <pid>                                                        # killes proce
 
 ### VIM COMMAND ###
 
-:wq                 # to save and exit
-:q!                 # to trash all changes
-SHIFT I             # to insert
-SHIFT Q             # to quit
-i                   # set to insert mode
-esc                 # escape from insert mode
-set number          # shows line number
+:wq                                 # to save and exit
+:q!                                 # to trash all changes
+SHIFT I                             # to insert
+SHIFT Q                             # to quit
+i                                   # set to insert mode
+esc                                 # escape from insert mode
+set number                          # shows line number
+<n>dd                               # delete line in command mode; n = lumber of line if given
+u                                   # undo
+clt+r                               # redo
+/<string>                           # search string; hin n for next match N for previous
+%s/<search>/<replace>/gc            # replace string
+%s/<search>/<replace>/g             # replace string with out confirmation prompt
 
 
 
