@@ -19,6 +19,7 @@ string.capwords('pass the string here')                     # converts 1st latte
 
 ### LIST ###
 '''
+    Ordered sequence of objects, mutatble
     Should be careful while iterating over a list. It's good practice to clone the list before iterating 
     ex. 
     a_list = [x,x,x,x]
@@ -37,6 +38,24 @@ list(something)                                             # doesn't mutate ie.
 del(aList[index])                                           # remove element at a specific index
 .pop() or .pop(index)                                       # removes element at end alslo suports indexing & RETURNS REMOVED ELEMENT
 .remove(element)                                            # removes a spesific element ie. a =[1,4,3,6]; a.remove(4);->a=[1,3,6]                                                    # 
+
+
+
+
+
+### DICTIONARY ###
+'''
+    Unordered key:value pairs, values are mutable
+'''
+
+dict['key'] = 'value'                                       # add an entry in dictionary
+delete(dict['key'])                                         # delete entry 
+.keys()                                                     # returns tuple of unordered list of keys 
+.values                                                     # returns tuple of unordered list of values
+
+
+
+
 
 
 
