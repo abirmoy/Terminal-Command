@@ -109,6 +109,8 @@ from __future__ import print_function
 import torch
 import numpy as np
 
+
+
 .numpy()                                                    # Converts a Torch Tensor to a NumPy Array
 .size()                                                     # shape of the matrix in tuple; same numPy .shape
 torch.empty(size) i.e torch.empty(5, 3)                     # Construct a 5x3 size matrix, uninitialized full of zeros
