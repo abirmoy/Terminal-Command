@@ -90,7 +90,7 @@ sudo apt remove <name of the package>           # i.e $sudo apt remove firefox
 
 ### SHORTCUT ###
 
-clt+alt+d                                       # open new terminal window
+clt+alt+t                                       # open new terminal window
 clt+l                                           # clear terminal
 clt+d                                           # close the terminal
 clt+c                                           # get out of any continous process in the terminal
