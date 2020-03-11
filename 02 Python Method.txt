@@ -85,9 +85,39 @@ sum(args*)                                                  #
 abs()                                                       # absuloute value
 
 
+### NUMPY ###
+'''
+    Shape: A tuple of integers giving the size of the array along each dimension is known as shape of the array.
+
+'''
+import numpy as np
+
+arr = np.array( [[ x11, x12, x13 ],[ x21, x22, x23]] )      # Creating array object
+arr.ndim                                                    # Printing array dimensions (axes)
+arr.shape                                                   # shape of array
+arr.size                                                    # size (total number of elements) of array
+arr.dtype                                                   # type of elements in array
+
+np.zeros((shape))                                           # Creates a array with all zeros according to the shape
 
 
 
+
+
+### PYTORCH ###
+from __future__ import print_function
+import torch
+import numpy as np
+
+.numpy()                                                    # Converts a Torch Tensor to a NumPy Array
+.size()                                                     # shape of the matrix in tuple; same numPy .shape
+torch.empty(size) i.e torch.empty(5, 3)                     # Construct a 5x3 size matrix, uninitialized full of zeros
+torch.rand(size)                                            # Construct a randomly initialized matrix
+torch.zeros(5, 3, dtype=torch.long)                         # Construct a matrix filled zeros and of dtype long
+torch.ones(size)                                            # Construct a matrix filled ones
+torch.add(x, y)                                             # Matrix addition
+y.add_(x)                                                   # adds x to y; Addition: in-place; Any operation that mutates a tensor in-place is post-fixed with an _. For example: x.copy_(y), x.t_(), will change x.
+np.add(a, 1, out=a)                                         # out=a will mutate 'a'; 'a' is a matrix; 1 will be added to the elements of Matrix 'a'; 
 
 
 
