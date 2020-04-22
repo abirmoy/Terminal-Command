@@ -126,7 +126,9 @@ service ssh start
 ifconfig
 
 
-
+### CONNECT TO LINUX FROM CMD ###
+1. Open cmd and type
+ssh <username>@<ip>                   # ie. ssh abc@168.xxx.xxx.xxx 
 
 
 
