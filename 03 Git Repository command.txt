@@ -8,9 +8,16 @@ git push -u origin master
 …or push an existing repository from the command line
 git remote add origin git@github.com:abirmoy/s.git
 git push -u origin master
-git push -u origin master --force
 
-#Branch
-git branch <branch-name>
-git checkout <branch-name>
+
+git push -u origin master --force
+git status
+
+### BRANCH ###
+git checkout -b <branch-name>    				# will create & switch to a new branch
+git branch <branch-name>					# creates branch
+git checkout <branch-name>					# switchs branch
+git merge <branch-name>
+git branch -d <branch-name>					# deletes branch
 git push -u origin <branch-name>
+
