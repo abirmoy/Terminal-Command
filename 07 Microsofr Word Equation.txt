@@ -1,0 +1,7 @@
+ω Omega ALT + 969
+Ω Omega ALT + 937 
+ℝ Real Number 
+ε epsilon Alt 238	
+Θ Theta Alt + 233	
+Superscript : Ctrl, Shift, and the Plus sign (+) ; inside equation '_'
+Subscript: press Ctrl and the Equal sign (=) ; inside equation '^'
