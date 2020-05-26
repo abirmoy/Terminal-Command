@@ -1,4 +1,6 @@
 type(arg)                                                  # returns file type
+map(function, iterables)				   # executes a specified function for each item in a iterable. The item is sent to the function as a parameter; function - Required. The function to execute for each item; iterable	Required. A sequence, collection or an iterator object. You can send as many iterables as you like, just make sure the function has one parameter for each iterable
+eval(expression, globals, locals)			   # evaluates the specified expression, if the expression is a legal Python statement, it will be executed; expression - A String, that will be evaluated as Python code; globals - Optional. A dictionary containing global parameters; locals - Optional. A dictionary containing local parameters
 
 
 
@@ -10,14 +12,21 @@ pass                                                       # does nothing; place
 
 
 ### STRING ###
+str(anything)						    # doesn't mutate, returns String
+string.split(separator, maxsplit)			    # doesn't mutate, returns list of string; separator - Optional. Specifies the separator to use when splitting the string. By default any whitespace is a separator; maxsplit - Optional. Specifies how many splits to do. Default value is -1, which is "all occurrences"
+.replace(old, new, count)                                   # returns a copy of the string; old – old substring you want to replace, new – new substring which would replace the old substring, count – the number of times you want to replace the old substring with the new substring. (Optional )    
+
+# FORMAT #
+f"some string {variable}"				    # doesn't mutate, returns String
+'some {} string {}'.format(var1, var2,...varN)		    # doesn't mutate, returns String
+'%s %s' % ('one', 'two')				    # output-->one two
+
 # CAPITALIZE WORD #
-.upper()                                                    # converts each latter uppercase
-.lower()                                                    # converts each latter lowercase
 .capitalize()                                               # converts 1st latter of a string uppercase
 .title()                                                    # "e g 3b".title() returns "E G 3B";  better use string.capwords
 string.capwords('pass the string here')                     # need to import string converts 1st latter of every word to uppercase
-
-.replace(old, new, count)                                   # returns a copy of the string; old – old substring you want to replace, new – new substring which would replace the old substring, count – the number of times you want to replace the old substring with the new substring. (Optional )    
+.upper()                                                    # converts each latter uppercase
+.lower()                                                    # converts each latter lowercase
 
 
 
@@ -30,14 +39,19 @@ string.capwords('pass the string here')                     # need to import str
     a_list_copy = a[:] # NOTE a_list_copy = a_list is not cloning and it could be dangerous
 '''
 
-.append(something)
-.sort()                                                     # mutates returns nothing
+list(something)                                             # doesn't mutate ie. s='abcd'; list(s);->['a','b','c']
+
+.sort()                                                     # mutates, returns nothing
 sorted(a_List)                                              # doesn't mutate
 .reverse()                                                  # mutates
-list(something)                                             # doesn't mutate ie. s='abcd'; list(s);->['a','b','c']
-.split('some_string')                                       # returns list, doesn't mutate ie. s='ab>qcd'; s.split('>');->['ab','qcd']
-.join(a_List)                                               # doesn't mutate ie. s=['a','b','c']; '_'.join(s);->'a_b_c'
+.split('some_string')                                       # returns list, doesn't mutate; ie. s='ab>qcd'; s.split('>');->['ab','qcd']
+.join(a_List)                                               # doesn't mutate, returns string; ie. s=['a','b','c']; '_'.join(s);->'a_b_c'
+
+# ADD LIST ELEMENT #
+.append(something)					    # appends element at the end of the list. mutates, returns nothing
+.insert(index, element)					    # mutates, returns nothing
 .extend([x,x,x])                                            # mutates and extends a list
+
 # REMOVE LIST ELEMENT #
 del(aList[index])                                           # remove element at a specific index
 .pop() or .pop(index)                                       # removes element at end alslo suports indexing & RETURNS REMOVED ELEMENT
