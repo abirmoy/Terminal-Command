@@ -1,4 +1,6 @@
 type(arg)                                                  # returns file type
+len(arg)						   # returns length of given arg
+time.process_time()					   # import time; returns float value of time in seconds.
 map(function, iterables)				   # executes a specified function for each item in a iterable. The item is sent to the function as a parameter; function - Required. The function to execute for each item; iterable	Required. A sequence, collection or an iterator object. You can send as many iterables as you like, just make sure the function has one parameter for each iterable
 eval(expression, globals, locals)			   # evaluates the specified expression, if the expression is a legal Python statement, it will be executed; expression - A String, that will be evaluated as Python code; globals - Optional. A dictionary containing global parameters; locals - Optional. A dictionary containing local parameters
 
@@ -12,16 +14,23 @@ pass                                                       # does nothing; place
 
 
 ### STRING ###
+import string
 str(anything)						    # doesn't mutate, returns String
 string.split(separator, maxsplit)			    # doesn't mutate, returns list of string; separator - Optional. Specifies the separator to use when splitting the string. By default any whitespace is a separator; maxsplit - Optional. Specifies how many splits to do. Default value is -1, which is "all occurrences"
+string.ascii_lowercase					    # returns a-z as string
+string.ascii_uppercasecase				    # returns A-Z as string
 .replace(old, new, count)                                   # returns a copy of the string; old – old substring you want to replace, new – new substring which would replace the old substring, count – the number of times you want to replace the old substring with the new substring. (Optional )    
+str.find(sub,start,end)					    # returns the lowest index of the substring if it is found in given string. If its is not found then it returns -1.
+str.rfind(sub,start,end)				    # same as .find() but starts finding from -1 index to 0
+
 
 # FORMAT #
 f"some string {variable}"				    # doesn't mutate, returns String
 'some {} string {}'.format(var1, var2,...varN)		    # doesn't mutate, returns String
 '%s %s' % ('one', 'two')				    # output-->one two
 
-# CAPITALIZE WORD #
+# SWAPCASE #
+.swapcase()					    	    # returns a string with all the cases changed
 .capitalize()                                               # converts 1st latter of a string uppercase
 .title()                                                    # "e g 3b".title() returns "E G 3B";  better use string.capwords
 string.capwords('pass the string here')                     # need to import string converts 1st latter of every word to uppercase
@@ -32,6 +41,7 @@ string.capwords('pass the string here')                     # need to import str
 
 ### LIST ###
 '''
+    https://www.w3schools.com/python/python_lists.asp
     Ordered sequence of objects, mutatble
     Should be careful while iterating over a list. It's good practice to clone the list before iterating 
     ex. 
@@ -40,17 +50,19 @@ string.capwords('pass the string here')                     # need to import str
 '''
 
 list(something)                                             # doesn't mutate ie. s='abcd'; list(s);->['a','b','c']
+del alist						    # delete the list completely
+.clear()						    # empties the list
 
 .sort()                                                     # mutates, returns nothing
 sorted(a_List)                                              # doesn't mutate
 .reverse()                                                  # mutates
-.split('some_string')                                       # returns list, doesn't mutate; ie. s='ab>qcd'; s.split('>');->['ab','qcd']
 .join(a_List)                                               # doesn't mutate, returns string; ie. s=['a','b','c']; '_'.join(s);->'a_b_c'
+.split('some_string')                                       # returns list, doesn't mutate; ie. s='ab>qcd'; s.split('>');->['ab','qcd']
 
 # ADD LIST ELEMENT #
 .append(something)					    # appends element at the end of the list. mutates, returns nothing
 .insert(index, element)					    # mutates, returns nothing
-.extend([x,x,x])                                            # mutates and extends a list
+.extend([x,x,x])                                            # mutates and extends a list; ie. list1.extend(list2)
 
 # REMOVE LIST ELEMENT #
 del(aList[index])                                           # remove element at a specific index
@@ -63,6 +75,7 @@ del(aList[index])                                           # remove element at 
 
 ### DICTIONARY ###
 '''
+    https://www.w3schools.com/python/python_dictionaries.asp
     Unordered key:value pairs, values are mutable
 '''
 
@@ -70,8 +83,22 @@ dict['key'] = 'value'                                       # add an entry in di
 delete(dict['key'])                                         # delete entry 
 .keys()                                                     # returns tuple of unordered list of keys 
 .values                                                     # returns tuple of unordered list of values
+dict.fromkeys(keys, value)				    # returns dictionary; keys - Required, An iterable specifying the keys of the new dictionary; value -Optional. The value for all keys. Default value is None
 
 
+### SET ###
+https://www.w3schools.com/python/python_sets.asp
+
+
+
+### BOOLEAN ###
+any(iterable)						    # returns True if any item in an iterable are true, otherwise it returns False;If the iterable object is empty, the any() function will return False; iterable: An iterable object (list, tuple, dictionary)
+
+str.isalnum()						    # checks if str contains alpha numerit charecters 
+str.isdigit()
+str.isalpha()
+str.islower()
+str.isupper()
 
 
 
@@ -85,6 +112,8 @@ import os                                                   # import os library
 
 os.rename(file_to_rename, 'new_name')                       # rename file
 os.path.exists(file path or name)                           # Returns true if the path is a file, directory, or a valid symlink.
+os.remove(file path or name)				    # remove file
+os.rmdir(file path or name)				    # remove directory
 os.path.isfile(file path or name)                           # Returns true if the path is a regular file or a symlink to a file.
 os.path.isdir(path)                                         # Returns true if the path is a directory or a symlink to a directory.
 os.getcwd()                                                 # Returns current working directory

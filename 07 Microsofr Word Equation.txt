@@ -5,3 +5,5 @@
 Θ Theta Alt + 233	
 Superscript : Ctrl, Shift, and the Plus sign (+) ; inside equation '_'
 Subscript: press Ctrl and the Equal sign (=) ; inside equation '^'
+hat: 0302
+bar: 0305
