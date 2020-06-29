@@ -1,4 +1,4 @@
-163
+### 163 ###
 
 Incoming
 Server: pop.163.com
@@ -7,3 +7,16 @@ Port: 110
 Outging
 Server: smtp.163.com
 Port: 25
+Requires SSL: Yes
+
+Other Settings: Default
+
+### GOOGLE ###
+Incoming
+Server: pop.gmail.com
+Port: 995
+Requires SSL: Yes
+
+Outging
+Server: smtp.gmail.com
+Port: 587

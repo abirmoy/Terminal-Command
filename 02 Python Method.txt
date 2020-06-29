@@ -146,7 +146,8 @@ arr.size                                                    # size (total number
 arr.dtype                                                   # type of elements in array
 
 np.zeros((shape))                                           # Creates a array with all zeros according to the shape
-
+np.log(xx)						    # compute logarithmic value
+np.sum(xx)						    # summation
 
 
 

@@ -1,0 +1,8 @@
+### WSL ###
+# ENABLEING WSL2 #
+https://docs.microsoft.com/en-us/windows/wsl/install-win10
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+wsl --set-default-version 2 			# setting default wsl version
+
+### NETWORKING ###
+arp -a					# Checks cached mac and IP address in local machine; ARP Address resollution Protocol
