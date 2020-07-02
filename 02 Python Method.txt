@@ -126,10 +126,14 @@ os.scandir(path)                                            # returns an iterato
 
 
 ### MATH ###
+import math                                                 # import math library
+
 min(args*)                                                  #
 max(args*)                                                  #
 sum(args*)                                                  #
 abs()                                                       # absuloute value
+math.exp(exponent)					    # exponent euler e
+math.log(x, base)					    # logarithm
 
 
 ### NUMPY ###

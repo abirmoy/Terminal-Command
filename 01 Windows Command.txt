@@ -1,8 +1,18 @@
 ### WSL ###
+
+# UPDATING LINUX KERNEL #
+https://docs.microsoft.com/en-us/windows/wsl/wsl2-kernel
+
 # ENABLEING WSL2 #
 https://docs.microsoft.com/en-us/windows/wsl/install-win10
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+
 wsl --set-default-version 2 			# setting default wsl version
+
+wsl --set-version <name of distro> 2		# change wsl version of particular distro
+
+wsl.exe --list --all 				# list of installed OS
+wsl -l -v					# list of installed OS: name, state, version
 
 ### NETWORKING ###
 arp -a					# Checks cached mac and IP address in local machine; ARP Address resollution Protocol
