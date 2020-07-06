@@ -1,4 +1,15 @@
-### WSL ###
+### LINUX AS WINDOWS SUBSYSTEM ###
+
+1.
+Run the command bellow on Powershell as administrator
+
+Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+
+2.
+Goto to the page bellow to download appropriate destro
+https://docs.microsoft.com/en-us/windows/wsl/install-manual
+
+
 
 # UPDATING LINUX KERNEL #
 https://docs.microsoft.com/en-us/windows/wsl/wsl2-kernel
@@ -16,3 +27,9 @@ wsl -l -v					# list of installed OS: name, state, version
 
 ### NETWORKING ###
 arp -a					# Checks cached mac and IP address in local machine; ARP Address resollution Protocol
+
+
+### CONNECT TO LINUX FROM CMD ###
+1. Open cmd and type
+ssh <username>@<ip>                   # ie. ssh abc@168.xxx.xxx.xxx 
+
