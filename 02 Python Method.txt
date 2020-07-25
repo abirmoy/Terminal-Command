@@ -23,6 +23,10 @@ string.ascii_uppercasecase				    # returns A-Z as string
 str.find(sub,start,end)					    # returns the lowest index of the substring if it is found in given string. If its is not found then it returns -1.
 str.rfind(sub,start,end)				    # same as .find() but starts finding from -1 index to 0
 
+### TEXTWRAP ###
+import textwrap
+textwrap.wrap(text, width=70, **kwargs)			    # Returns a list of output lines; Wraps the single paragraph in text (a string) so every line is at most width characters long. 
+textwrap.fill(text, width=70, **kwargs)			    # Same as: "\n".join(wrap(text, ...))
 
 # FORMAT #
 f"some string {variable}"				    # doesn't mutate, returns String
