@@ -116,7 +116,7 @@ del(aList[index])                                           # remove element at 
 dict['key'] = 'value'                                       # add an entry in dictionary
 delete(dict['key'])                                         # delete entry 
 .keys()                                                     # returns tuple of unordered list of keys 
-.values                                                     # returns tuple of unordered list of values
+.values()                                                   # returns tuple of unordered list of values
 dict.fromkeys(keys, value)				    # returns dictionary; keys - Required, An iterable specifying the keys of the new dictionary; value -Optional. The value for all keys. Default value is None
 
 
