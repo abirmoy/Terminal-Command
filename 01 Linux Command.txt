@@ -45,7 +45,9 @@ history                                         # prints the 1000 unique command
 locate <name>                                   # locate files 
 ifconfig                                        # ip related information
 uname                                           # destro name
-uname -a                                        # details of destro
+uname -a                                        # details of destro and kernel;
+lsb_release -a					# destro version details
+lsb_release -cs					# name of Ubuntu distribution
 shutdown                                        # shutdown after 1 minute
 shutdown -c                                     # cancle shutdown
 

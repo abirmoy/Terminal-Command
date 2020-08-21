@@ -1,4 +1,12 @@
-## DIRECTORY
+### RUNNING DOCKER ON LINUX ###
+$sudo docker service run				# starts docker demon
+
+$sudo docker run -it <destro ex. ubuntu> bash		# run a linux container
+
+$sudo docker docker pull <image name>			# pull image from docker hub
+
+
+## DIRECTORY ##
 docker container exec -it <container-id> ls <path-to-directory>
 
 docker exec -it containerId /bin/bash

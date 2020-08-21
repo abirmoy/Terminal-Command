@@ -1,9 +1,10 @@
-type(arg)                                                  # returns file type
-len(arg)						   # returns length of given arg
-time.process_time()					   # import time; returns float value of time in seconds.
-map(function, iterables)				   # executes a specified function for each item in a iterable. The item is sent to the function as a parameter; function - Required. The function to execute for each item; iterable	Required. A sequence, collection or an iterator object. You can send as many iterables as you like, just make sure the function has one parameter for each iterable
-eval(expression, globals, locals)			   # evaluates the specified expression, if the expression is a legal Python statement, it will be executed; expression - A String, that will be evaluated as Python code; globals - Optional. A dictionary containing global parameters; locals - Optional. A dictionary containing local parameters
-print('', sep='\n')					   # by default sep=' '; sep parameter in print(); print('G','F','G', sep=''); >>GFG; print('09','12','2016', sep='-'); >>09-12-2016; 
+type(arg)                                                  	# returns file type
+len(arg)						   	# returns length of given arg
+time.process_time()					   	# import time; returns float value of time in seconds.
+map(function, iterables)				   	# executes a specified function for each item in a iterable. The item is sent to the function as a parameter; function - Required. The function to execute for each item; iterable	Required. A sequence, collection or an iterator object. You can send as many iterables as you like, just make sure the function has one parameter for each iterable
+eval(expression, globals, locals)			   	# evaluates the specified expression, if the expression is a legal Python statement, it will be executed; expression - A String, that will be evaluated as Python code; globals - Optional. A dictionary containing global parameters; locals - Optional. A dictionary containing local parameters
+enumerate(iterable, start=0)					#
+print('', sep='\n')					   	# by default sep=' '; sep parameter in print(); print('G','F','G', sep=''); >>GFG; print('09','12','2016', sep='-'); >>09-12-2016; 
 
 
 
@@ -25,51 +26,51 @@ In addition you can specify if the file should be handled as binary or text mode
 "b" - Binary - Binary mode (e.g. images)
 '''
 
-f = open("demofile.txt")				   # f = open("demofile.txt", "rt"); Because "r" for read, and "t" for text are the default values, you do not need to specify them.
-f.read()						   # read the whole file
-f.readlines()						   # Read every lines of the file
-f.readline()						   # Read one line of the file
-f.write("Now the file has more content!")		   # f = open("demofile2.txt", "a or w")
-f.close()						   # should always close your files, in some cases, due to buffering, changes made to a file may not show until you close the file.
+f = open("demofile.txt")				   	# f = open("demofile.txt", "rt"); Because "r" for read, and "t" for text are the default values, you do not need to specify them.
+f.read()						   	# read the whole file
+f.readlines()						   	# Read every lines of the file
+f.readline()						   	# Read one line of the file
+f.write("Now the file has more content!")		   	# f = open("demofile2.txt", "a or w")
+f.close()						   	# should always close your files, in some cases, due to buffering, changes made to a file may not show until you close the file.
 
 
 
 ### BRANCHING & ITERATION  ###
-continue                                                   # goes to the top of the current closest enclosing loop
-break                                                      # breaks out of the current enclosing loop
-pass                                                       # does nothing; placeholder
+continue                                                   	# goes to the top of the current closest enclosing loop
+break                                                      	# breaks out of the current enclosing loop
+pass                                                       	# does nothing; placeholder
 
 
 
 ### STRING ###
-string.center(length, character)			    # length	Required. The length of the returned string; character	Optional. The character to fill the missing space on each side. Default is " " (space)
-string.join(iterable)					    # takes all items in an iterable and joins them into one string; iterable	Required. Any iterable object where all the returned values are strings
+string.center(length, character)			    	# length	Required. The length of the returned string; character	Optional. The character to fill the missing space on each side. Default is " " (space)
+string.join(iterable)					    	# takes all items in an iterable and joins them into one string; iterable	Required. Any iterable object where all the returned values are strings
 import string
-str(anything)						    # doesn't mutate, returns String
-string.split(separator, maxsplit)			    # doesn't mutate, returns list of string; separator - Optional. Specifies the separator to use when splitting the string. By default any whitespace is a separator; maxsplit - Optional. Specifies how many splits to do. Default value is -1, which is "all occurrences"
-string.ascii_lowercase					    # returns alphabet a-z as string
-string.ascii_uppercasecase				    # returns alphabet A-Z as string
-.replace(old, new, count)                                   # returns a copy of the string; old – old substring you want to replace, new – new substring which would replace the old substring, count – the number of times you want to replace the old substring with the new substring. (Optional )    
-str.find(sub,start,end)					    # returns the lowest index of the substring if it is found in given string. If its is not found then it returns -1.
-str.rfind(sub,start,end)				    # same as .find() but starts finding from -1 index to 0
+str(anything)						    	# doesn't mutate, returns String
+string.split(separator, maxsplit)			    	# doesn't mutate, returns list of string; separator - Optional. Specifies the separator to use when splitting the string. By default any whitespace is a separator; maxsplit - Optional. Specifies how many splits to do. Default value is -1, which is "all occurrences"
+string.ascii_lowercase					    	# returns alphabet a-z as string
+string.ascii_uppercasecase				    	# returns alphabet A-Z as string
+.replace(old, new, count)                                   	# returns a copy of the string; old – old substring you want to replace, new – new substring which would replace the old substring, count – the number of times you want to replace the old substring with the new substring. (Optional )    
+str.find(sub,start,end)					    	# returns the lowest index of the substring if it is found in given string. If its is not found then it returns -1.
+str.rfind(sub,start,end)				    	# same as .find() but starts finding from -1 index to 0
 
 ### TEXTWRAP ###
 import textwrap
-textwrap.wrap(text, width=70, **kwargs)			    # Returns a list of output lines; Wraps the single paragraph in text (a string) so every line is at most width characters long. 
-textwrap.fill(text, width=70, **kwargs)			    # Same as: "\n".join(wrap(text, ...))
+textwrap.wrap(text, width=70, **kwargs)			    	# Returns a list of output lines; Wraps the single paragraph in text (a string) so every line is at most width characters long. 
+textwrap.fill(text, width=70, **kwargs)			    	# Same as: "\n".join(wrap(text, ...))
 
 # FORMAT #
-f"some string {variable}"				    # doesn't mutate, returns String
-'some {} string {}'.format(var1, var2,...varN)		    # doesn't mutate, returns String
-'%s %s' % ('one', 'two')				    # output-->one two
+f"some string {variable}"				    	# doesn't mutate, returns String
+'some {} string {}'.format(var1, var2,...varN)		    	# doesn't mutate, returns String
+'%s %s' % ('one', 'two')				    	# output-->one two
 
 # SWAPCASE #
-.swapcase()					    	    # returns a string with all the cases changed
-.capitalize()                                               # converts 1st latter of a string to uppercase
-.title()                                                    # "e g 3b".title() returns "E G 3B";  better use string.capwords
-string.capwords('pass the string here')                     # need to import string converts 1st latter of every word to uppercase
-.upper()                                                    # converts each latter uppercase
-.lower()                                                    # converts each latter lowercase
+.swapcase()					    	    	# returns a string with all the cases changed
+.capitalize()                                               	# converts 1st latter of a string to uppercase
+.title()                                                    	# "e g 3b".title() returns "E G 3B";  better use string.capwords
+string.capwords('pass the string here')                     	# need to import string converts 1st latter of every word to uppercase
+.upper()                                                    	# converts each latter uppercase
+.lower()                                                    	# converts each latter lowercase
 
 
 
@@ -83,25 +84,25 @@ string.capwords('pass the string here')                     # need to import str
     a_list_copy = a[:] # NOTE a_list_copy = a_list is not cloning and it could be dangerous
 '''
 
-list(something)                                             # doesn't mutate ie. s='abcd'; list(s);->['a','b','c']
-del alist						    # delete the list completely
-.clear()						    # empties the list
+list(something)                                             	# doesn't mutate ie. s='abcd'; list(s);->['a','b','c']
+del alist						    	# delete the list completely
+.clear()						    	# empties the list
 
-.sort()                                                     # mutates, returns nothing
-sorted(a_List)                                              # doesn't mutate
-.reverse()                                                  # mutates
-.join(a_List)                                               # doesn't mutate, returns string; ie. s=['a','b','c']; '_'.join(s);->'a_b_c'
-.split('some_string')                                       # returns list, doesn't mutate; ie. s='ab>qcd'; s.split('>');->['ab','qcd']
+.sort()                                                     	# mutates, returns nothing
+sorted(a_List)                                              	# doesn't mutate
+.reverse()                                                  	# mutates
+.join(a_List)                                               	# doesn't mutate, returns string; ie. s=['a','b','c']; '_'.join(s);->'a_b_c'
+.split('some_string')                                       	# returns list, doesn't mutate; ie. s='ab>qcd'; s.split('>');->['ab','qcd']
 
 # ADD LIST ELEMENT #
-.append(something)					    # appends element at the end of the list. mutates, returns nothing
-.insert(index, element)					    # mutates, returns nothing
-.extend([x,x,x])                                            # mutates and extends a list; ie. list1.extend(list2)
+.append(something)					    	# appends element at the end of the list. mutates, returns nothing
+.insert(index, element)					    	# mutates, returns nothing
+.extend([x,x,x])                                            	# mutates and extends a list; ie. list1.extend(list2)
 
 # REMOVE LIST ELEMENT #
-del(aList[index])                                           # remove element at a specific index
-.pop() or .pop(index)                                       # removes element at end alslo suports indexing & RETURNS REMOVED ELEMENT
-.remove(element)                                            # removes a spesific element ie. a =[1,4,3,6]; a.remove(4);->a=[1,3,6]                                                    # 
+del(aList[index])                                           	# remove element at a specific index
+.pop() or .pop(index)                                       	# removes element at end alslo suports indexing & RETURNS REMOVED ELEMENT
+.remove(element)                                            	# removes a spesific element ie. a =[1,4,3,6]; a.remove(4);->a=[1,3,6]                                                    # 
 # Remove any duplicates from a List:
 mylist = ["a", "b", "a", "c", "c"]
 mylist = list(dict.fromkeys(mylist))
@@ -116,11 +117,11 @@ print(mylist)
     Unordered key:value pairs, values are mutable
 '''
 
-dict['key'] = 'value'                                       # add an entry in dictionary
-delete(dict['key'])                                         # delete entry 
-.keys()                                                     # returns tuple of unordered list of keys 
-.values()                                                   # returns tuple of unordered list of values
-dict.fromkeys(keys, value)				    # returns dictionary; keys - Required, An iterable specifying the keys of the new dictionary; value -Optional. The value for all keys. Default value is None
+dict['key'] = 'value'                                       	# add an entry in dictionary
+delete(dict['key'])                                         	# delete entry 
+.keys()                                                     	# returns tuple of unordered list of keys 
+.values()                                                   	# returns tuple of unordered list of values
+dict.fromkeys(keys, value)				    	# returns dictionary; keys - Required, An iterable specifying the keys of the new dictionary; value -Optional. The value for all keys. Default value is None
 
 ### SET ###
 https://www.w3schools.com/python/python_sets.asp
@@ -128,9 +129,9 @@ https://www.w3schools.com/python/python_sets.asp
 
 
 ### BOOLEAN ###
-any(iterable)						    # returns True if any item in an iterable are true, otherwise it returns False;If the iterable object is empty, the any() function will return False; iterable: An iterable object (list, tuple, dictionary)
+any(iterable)						    	# returns True if any item in an iterable are true, otherwise it returns False;If the iterable object is empty, the any() function will return False; iterable: An iterable object (list, tuple, dictionary)
 
-str.isalnum()						    # checks if str contains alpha numerit charecters 
+str.isalnum()						    	# checks if str contains alpha numerit charecters 
 str.isdigit()
 str.isalpha()
 str.islower()
@@ -143,40 +144,40 @@ from collections import Counter
 Counter(anyList)					    # container that stores elements as dictionary keys, and their counts are stored as dictionary values. Ex. myList = [1,1,2,3,4,5,3,2,3,4,2,1,2,3]; print(Counter(myList));>>Counter({2: 4, 3: 4, 1: 3, 4: 2, 5: 1}); print(Counter(myList).items()); >>[(1, 3), (2, 4), (3, 4), (4, 2), (5, 1)]; print(Counter(myList).keys()); >>[1, 2, 3, 4, 5]; print(Counter(myList).values()); >>[3, 4, 4, 2, 1]
 
 from itertools import permutations
-itertools.permutations(iterable[, r])			    #  returns successive r length permutations of elements in an iterable； print（list(permutations(['1','2','3']))）; >> [('1', '2', '3'), ('1', '3', '2'),...]
+itertools.permutations(iterable[, r])			    	#  returns successive r length permutations of elements in an iterable； print（list(permutations(['1','2','3']))）; >> [('1', '2', '3'), ('1', '3', '2'),...]
 
 from itertools import combinations
-itertools.combinations(iterable, r)			    # This tool returns the  length subsequences of elements from the input iterable; Combinations are emitted in lexicographic sorted order. So, if the input iterable is sorted, the combination tuples will be produced in sorted order;print(list(combinations('12345',2))); >>[('1', '2'), ('1', '3'),...]
+itertools.combinations(iterable, r)			    	# This tool returns the  length subsequences of elements from the input iterable; Combinations are emitted in lexicographic sorted order. So, if the input iterable is sorted, the combination tuples will be produced in sorted order;print(list(combinations('12345',2))); >>[('1', '2'), ('1', '3'),...]
 
 
 ### OS ###
-import os                                                   # import os library
+import os                                                   	# import os library
 
 
-os.rename(file_to_rename, 'new_name')                       # rename file
-os.path.exists(file path or name)                           # Returns true if the path is a file, directory, or a valid symlink.
-os.remove(file path or name)				    # remove file
-os.rmdir(file path or name)				    # remove directory
-os.path.isfile(file path or name)                           # Returns true if the path is a regular file or a symlink to a file.
-os.path.isdir(path)                                         # Returns true if the path is a directory or a symlink to a directory.
-os.getcwd()                                                 # Returns current working directory
-os.chdir(path)                                              # change directory
-os.listdir(path)                                            # returns list of the files and subdirectories in the directory passed into the path argument
-os.scandir(path)                                            # returns an iterator as opposed to a list when called
+os.rename(file_to_rename, 'new_name')                       	# rename file
+os.path.exists(file path or name)                           	# Returns true if the path is a file, directory, or a valid symlink.
+os.remove(file path or name)				    	# remove file
+os.rmdir(file path or name)				    	# remove directory
+os.path.isfile(file path or name)                           	# Returns true if the path is a regular file or a symlink to a file.
+os.path.isdir(path)                                         	# Returns true if the path is a directory or a symlink to a directory.
+os.getcwd()                                                 	# Returns current working directory
+os.chdir(path)                                              	# change directory
+os.listdir(path)                                            	# returns list of the files and subdirectories in the directory passed into the path argument
+os.scandir(path)                                            	# returns an iterator as opposed to a list when called
 
 
 
 
 
 ### MATH ###
-import math                                                 # import math library
+import math                                                 	# import math library
 
-min(args*)                                                  #
-max(args*)                                                  #
-sum(args*)                                                  #
-abs()                                                       # absuloute value
-math.exp(exponent)					    # exponent euler e
-math.log(x, base)					    # logarithm
+min(args*)                                                  	#
+max(args*)                                                  	#
+sum(args*)                                                  	#
+abs()                                                       	# absuloute value
+math.exp(exponent)					    	# exponent euler e
+math.log(x, base)					    	# logarithm
 
 
 ### NUMPY ###
@@ -186,21 +187,21 @@ math.log(x, base)					    # logarithm
 '''
 import numpy as np
 
-arr = np.array( [[ x11, x12, x13 ],[ x21, x22, x23]] )      # Creating array object
-arr.ndim                                                    # Printing array dimensions (axes)
-arr.shape                                                   # shape of array
-arr.size                                                    # size (total number of elements) of array
-arr.dtype                                                   # type of elements in array
+arr = np.array( [[ x11, x12, x13 ],[ x21, x22, x23]] )      	# Creating array object
+arr.ndim                                                    	# Printing array dimensions (axes)
+arr.shape                                                   	# shape of array
+arr.size                                                    	# size (total number of elements) of array
+arr.dtype                                                   	# type of elements in array
 
-np.random.randn(shape)					    # randomly initialize vactor
-np.zeros((shape))                                           # Creates a array with all zeros according to the shape
-np.log(xx)						    # compute logarithmic value
-np.sum(xx)						    # summation
-arr.sum(axis=0)				    		    # sum the elements of the columns(axis=0) or rows(axis=1)
-np.abs(xx)						    # compute absolute value
-np.exp(vector or xx)					    # exponent euler e
-np.maximum(x1,x2)					    # Element-wise maximum of array elements; x1, x2array_like The arrays holding the elements to be compared. If x1.shape != x2.shape, they must be broadcastable to a common shape (which becomes the shape of the output).
-np.transpose(arr)					    # transpose
+np.random.randn(shape)					    	# randomly initialize vactor
+np.zeros((shape))                                           	# Creates a array with all zeros according to the shape
+np.log(xx)						    	# compute logarithmic value
+np.sum(xx)						    	# summation
+arr.sum(axis=0)				    		    	# sum the elements of the columns(axis=0) or rows(axis=1)
+np.abs(xx)						    	# compute absolute value
+np.exp(vector or xx)					    	# exponent euler e
+np.maximum(x1,x2)					    	# Element-wise maximum of array elements; x1, x2array_like The arrays holding the elements to be compared. If x1.shape != x2.shape, they must be broadcastable to a common shape (which becomes the shape of the output).
+np.transpose(arr)					    	# transpose
 
 
 ### PYTORCH ###
@@ -210,15 +211,15 @@ import numpy as np
 
 
 
-.numpy()                                                    # Converts a Torch Tensor to a NumPy Array
-.size()                                                     # shape of the matrix in tuple; same numPy .shape
-torch.empty(size) i.e torch.empty(5, 3)                     # Construct a 5x3 size matrix, uninitialized full of zeros
-torch.rand(size)                                            # Construct a randomly initialized matrix
-torch.zeros(5, 3, dtype=torch.long)                         # Construct a matrix filled zeros and of dtype long
-torch.ones(size)                                            # Construct a matrix filled ones
-torch.add(x, y)                                             # Matrix addition
-y.add_(x)                                                   # adds x to y; Addition: in-place; Any operation that mutates a tensor in-place is post-fixed with an _. For example: x.copy_(y), x.t_(), will change x.
-np.add(a, 1, out=a)                                         # out=a will mutate 'a'; 'a' is a matrix; 1 will be added to the elements of Matrix 'a'; 
+.numpy()                                                    	# Converts a Torch Tensor to a NumPy Array
+.size()                                                     	# shape of the matrix in tuple; same numPy .shape
+torch.empty(size) i.e torch.empty(5, 3)                     	# Construct a 5x3 size matrix, uninitialized full of zeros
+torch.rand(size)                                            	# Construct a randomly initialized matrix
+torch.zeros(5, 3, dtype=torch.long)                         	# Construct a matrix filled zeros and of dtype long
+torch.ones(size)                                            	# Construct a matrix filled ones
+torch.add(x, y)                                             	# Matrix addition
+y.add_(x)                                                   	# adds x to y; Addition: in-place; Any operation that mutates a tensor in-place is post-fixed with an _. For example: x.copy_(y), x.t_(), will change x.
+np.add(a, 1, out=a)                                         	# out=a will mutate 'a'; 'a' is a matrix; 1 will be added to the elements of Matrix 'a'; 
 
 
 
