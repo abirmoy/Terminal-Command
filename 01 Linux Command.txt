@@ -105,7 +105,7 @@ clt+c                                           	# get out of any continous proc
 
 
 ### PYTHON ###
-sudo apt install python3-pip				# Fedora enabling pip
+sudo apt install python3-pip				# enabling pip
 
 
 
