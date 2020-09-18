@@ -1,3 +1,9 @@
+### PYTHON VERSION ###
+python --version
+
+import sys
+sys.version
+
 type(arg)                                                  	# returns file type
 len(arg)						   	# returns length of given arg
 time.process_time()					   	# import time; returns float value of time in seconds.
