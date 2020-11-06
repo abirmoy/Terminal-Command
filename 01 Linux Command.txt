@@ -43,7 +43,7 @@ clt+r                               # redo
 whatis <name of a command>                      # i.e $whatis pwd will show information about the command pwd
 history                                         # prints the 1000 unique command history
 locate <name>                                   # locate files 
-ifconfig                                        # ip related information
+ifconfig                                        # ip related information, sudo apt install net-tools --> if $ifconfig command not found
 uname                                           # destro name
 uname -a                                        # details of destro and kernel;
 lsb_release -a					# destro version details
