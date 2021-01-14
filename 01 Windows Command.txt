@@ -1,3 +1,10 @@
+...>c./../B>filename.txt 		# list of file in a directory
+
+
+
+
+
+
 ### LINUX AS WINDOWS SUBSYSTEM ###
 
 1.
