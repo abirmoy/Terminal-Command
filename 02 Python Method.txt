@@ -3,6 +3,7 @@ python --version
 
 import sys
 sys.version
+sys.platform
 
 type(arg)                                                  	# returns file type
 len(arg)						   	# returns length of given arg

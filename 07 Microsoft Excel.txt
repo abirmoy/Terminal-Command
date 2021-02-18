@@ -1,0 +1,26 @@
+## Reference Error ##
+Right click>Peste values(123)
+
+### Filter Shortcut
+Turn ON/OFF
+SHIFT+CTRL+L
+or
+Select Row>Tab:Home/Data>Sort & Filter>Filter
+
+### String Concat ###
+=LEFT(A2,3<cell_ref>) &"<any_string/veriabel/cel_ref>"& RIGHT(<cell_ref>)
+
+### VLOOKUP ###
+Select empty column>select terget column>click FX>select VLOOKUP>OK
+Lookup Value:select colum>Table array:Select target columns>
+col_inde_num:difference of between target columns>range lookup:0
+
+### Type Conversion ###
+Select empty column>enter '=' >Select terget column>Provide equation>Double click
+
+### Highlight Duplicate ###
+Select column>Tab:Home>Conditional Formating>Highlight Cell Rules>Duplicate Values>OK
+
+### Remove Duplicate ###
+Select Column>Tab:Data>Section:Data Tools>Remove Duplicates
+
