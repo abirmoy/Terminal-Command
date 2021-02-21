@@ -6,6 +6,9 @@ cls					# clear screen
 ### NETWORKING ###
 ipconfig -all				# IP address
 arp -a					# Checks cached mac and IP address in local machine; ARP:Address resollution Protocol
+arp –s  <ip_address> <physical_address> # binding mac address
+arp –d  <ip_address> <physical_address> # deleting an entry
+
 
 
 ### CONNECT TO LINUX FROM CMD ###
