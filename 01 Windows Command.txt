@@ -5,7 +5,7 @@ cls					# clear screen
 
 ### NETWORKING ###
 ipconfig -all				# IP address
-arp -a					# Checks cached mac and IP address in local machine; ARP Address resollution Protocol
+arp -a					# Checks cached mac and IP address in local machine; ARP:Address resollution Protocol
 
 
 ### CONNECT TO LINUX FROM CMD ###
