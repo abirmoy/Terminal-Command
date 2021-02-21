@@ -1,6 +1,16 @@
-...>c./../B>filename.txt 		# list of file in a directory
+cls					# clear screen
+...>c./.../dir/B>filename.txt 		# <must write 'dir' before B>list of file in a directory
 
 
+
+### NETWORKING ###
+ipconfig -all				# IP address
+arp -a					# Checks cached mac and IP address in local machine; ARP Address resollution Protocol
+
+
+### CONNECT TO LINUX FROM CMD ###
+1. Open cmd and type
+ssh <username>@<ip>                   # ie. ssh abc@168.xxx.xxx.xxx 
 
 
 
@@ -31,12 +41,4 @@ wsl --set-version <name of distro> 2		# change wsl version of particular distro
 
 wsl.exe --list --all 				# list of installed OS
 wsl -l -v					# list of installed OS: name, state, version
-
-### NETWORKING ###
-arp -a					# Checks cached mac and IP address in local machine; ARP Address resollution Protocol
-
-
-### CONNECT TO LINUX FROM CMD ###
-1. Open cmd and type
-ssh <username>@<ip>                   # ie. ssh abc@168.xxx.xxx.xxx 
 
