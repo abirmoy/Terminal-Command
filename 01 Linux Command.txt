@@ -50,6 +50,7 @@ lsb_release -a					# destro version details
 lsb_release -cs					# name of Ubuntu distribution
 shutdown                                        # shutdown after 1 minute
 shutdown -c                                     # cancle shutdown
+sudo reboot					# reboot
 
 # DIRECTORY & FILE #
 touch <file name>                               # i.e $touch test.sh creates a file name test.sh
