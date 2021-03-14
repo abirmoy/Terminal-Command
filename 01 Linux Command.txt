@@ -1,14 +1,15 @@
 ### PROCESS ###
 
-watch free -h                                                     # check performance
-service <name of the app> <start, stop, restart, status>          # i.e service ssh start
-ps aux                                                            # all process list
-killall <programname>                                             # i.e $killall firefox; killes all firefox process
-kill <pid>                                                        # killes process
+watch free -h							# check performance
+service <name of the app> <start, stop, restart, status>	# i.e service ssh start
+service --status-all						# list of runing services
+ps aux								# all process list							
+killall <program_name>						# i.e $killall firefox; killes all firefox process
+kill <pid>							# killes process
 
-# CRONJOB #
-ps -ax|grep cron                                                  # cronjobs process list
-crontab -l                                                        # lists cronjobs
+### CRONJOB ###
+ps -ax|grep cron						# cronjobs process list
+crontab -l							# lists cronjobs
 
 
 
@@ -72,8 +73,11 @@ rm -v /home/vivek/data/*                        	# To see what is being done whe
 rmdir <directory name>                          	# i.e $rmdir abir deletes abir
 rm -rfv /home/vivek/data/                       	# deletes all files folders from a directory
 
-# SWITCHING USER-ROOT #
+# ADD DELETE SWITCHING USER-ROOT #
 whoami                                          # check current username
+sudo adduser <username>				# add user
+sudo adduser <username> sudo			# add user sudo permission
+sudo userdel -r <username>			# delete user
 su - <username>                                 # switch to another user i.e $su - user2
 sudo -i                                         # switch to <root@linlin-mintOS#> $pwd ->root
 sudo -s                                         # switch to <root@linlin-mintOS#> $pwd ->/home/linlin
@@ -81,7 +85,8 @@ sudo sh                                         # login as root switches to <#> 
 sudo su <username>                              # i.e $sudo su linlin; switch back to othruser $exit, $logout also works
 $ exit                                          # exit from root
 $ logout                                        # logout of root  
-
+$ passwd					# change password
+sudo passwd <username> -d			# remove a user's password		
 
 # UPDATE #
 sudo apt update & sudo apt upgrade              	# update package manager
@@ -108,6 +113,8 @@ clt+c                                           	# get out of any continous proc
 
 
 ### How to install SSH server in Ubuntu ###
+https://www.cyberciti.biz/faq/ubuntu-linux-install-openssh-server/#:~:text=Enable%20the%20ssh%20service%20by,typing%20sudo%20systemctl%20start%20ssh
+
 The procedure to install a ssh server in Ubuntu Linux is as follows:
 
 Open the terminal application for Ubuntu desktop.
