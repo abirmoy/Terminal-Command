@@ -1,3 +1,11 @@
+### FUNCTIONS ###
+SUM(START:END)
+AVERAGE(START:END)
+MAX()
+MIN()
+
+
+
 ## Reference Error ##
 Right click>Peste values(123)
 
@@ -24,3 +32,7 @@ Select column>Tab:Home>Conditional Formating>Highlight Cell Rules>Duplicate Valu
 ### Remove Duplicate ###
 Select Column>Tab:Data>Section:Data Tools>Remove Duplicates
 
+### VERIABLE ###
+&veriable&
+
+="a &variable& within string"
