@@ -1,3 +1,5 @@
+echo Hello world						# print string in the terminal
+ls > /path/to/file/filename					# save something as text
 ### PROCESS ###
 
 watch free -h							# check performance
@@ -45,6 +47,7 @@ whatis <name of a command>                      # i.e $whatis pwd will show info
 history                                         # prints the 1000 unique command history
 locate <name>                                   # locate files 
 ifconfig                                        # ip related information, sudo apt install net-tools --> if $ifconfig command not found
+hostname -I					# IP address
 uname                                           # destro name
 uname -a                                        # details of destro and kernel;
 lsb_release -a					# destro version details
@@ -62,7 +65,13 @@ ls                                              # list of files and folders
 ls -a                                           # list along with hidden files
 ls -all                                         # list along with permission type
 
-# CUT COPY MOVE RENAME #
+# CUT COPY RENAME #
+cp source/directory/filename destinanion/directory	# copy file ex. cp /usr/bin/octave/3.2.4/m/miscellaneous/mkoctfile.m /usr/bin/mkoctfile-3.2.4
+mv source/directory/filename destinanion/directory	# cut move file
+
+
+
+
 
 # DELETE FILE FOLDERS #
 -r : Remove directories and their contents recursively
@@ -78,6 +87,8 @@ whoami                                          # check current username
 sudo adduser <username>				# add user
 sudo adduser <username> sudo			# add user sudo permission
 sudo userdel -r <username>			# delete user
+sudo usermod -l newUsername oldUsername		# change username
+sudo usermod -d /home/newHomeDir -m newUsername	# change home-folder
 su - <username>                                 # switch to another user i.e $su - user2
 sudo -i                                         # switch to <root@linlin-mintOS#> $pwd ->root
 sudo -s                                         # switch to <root@linlin-mintOS#> $pwd ->/home/linlin
@@ -101,13 +112,42 @@ sudo apt reinstall <name of the package>		# reinstallpackages
 # UNINSTALL #
 sudo apt remove <name of the package>           	# i.e $sudo apt remove firefox
 
+# LIST OF INSTALLED SOFTWARE #
+dpkg -l				# Aptitude-based distributions (Ubuntu, Debian, etc)
+rpm -qa				# RPM-based distributions (Fedora, RHEL, etc)
+pkg_info			# pkg*-based distributions (OpenBSD, FreeBSD, etc)
+equery list or eix -I		# Portage-based distributions (Gentoo, etc)
+pacman -Q			# pacman-based distributions (Arch Linux, etc)
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### SHORTCUT ###
 
 clt+alt+t                                       	# open new terminal window
+shift+clt+'+/-'						# Zoomin Zoomout  
 clt+l                                           	# clear terminal
 clt+d                                           	# close the terminal
 clt+c                                           	# get out of any continous process in the terminal
+clt+alt+↑						# maximize window fullscreen
+
+
+
+
+
+
+
+
+
 
 
 
