@@ -48,10 +48,8 @@ history                                         # prints the 1000 unique command
 locate <name>                                   # locate files 
 ifconfig                                        # ip related information, sudo apt install net-tools --> if $ifconfig command not found
 hostname -I					# IP address
-uname                                           # destro name
-uname -a                                        # details of destro and kernel;
-lsb_release -a					# destro version details
-lsb_release -cs					# name of Ubuntu distribution
+shutdown [OPTION]... TIME [MESSAGE]		# e.g sudo shutdown -h +3; The system is going DOWN for system halt in 3 minutes!
+sudo shutdown -h now				# shutdown immediately
 shutdown                                        # shutdown after 1 minute
 shutdown -c                                     # cancle shutdown
 sudo reboot					# reboot
@@ -82,8 +80,16 @@ rm -v /home/vivek/data/*                        	# To see what is being done whe
 rmdir <directory name>                          	# i.e $rmdir abir deletes abir
 rm -rfv /home/vivek/data/                       	# deletes all files folders from a directory
 
+
+
+
+
 # ADD DELETE SWITCHING USER-ROOT #
+lsb_release -a					# destro version details
+lsb_release -cs					# name of Ubuntu distribution
 whoami                                          # check current username
+uname                                           # destro name
+uname -a                                        # details of destro and kernel;
 sudo adduser <username>				# add user
 sudo adduser <username> sudo			# add user sudo permission
 sudo userdel -r <username>			# delete user
@@ -98,6 +104,9 @@ $ exit                                          # exit from root
 $ logout                                        # logout of root  
 $ passwd					# change password
 sudo passwd <username> -d			# remove a user's password		
+
+
+
 
 # UPDATE #
 sudo apt update & sudo apt upgrade              	# update package manager
