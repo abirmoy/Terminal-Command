@@ -1,3 +1,7 @@
+'''
+An argument can be used to specify something for the command to act upon.
+'''
+
 echo Hello world						# print string in the terminal
 ls > /path/to/file/filename					# save something as text
 ### PROCESS ###
