@@ -1,3 +1,6 @@
+### INTERACTIVE SHELL ###
+py -i name.py
+
 ### PYTHON VERSION ###
 python --version
 

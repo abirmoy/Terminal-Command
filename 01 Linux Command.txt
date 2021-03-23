@@ -1,5 +1,9 @@
 '''
-An argument can be used to specify something for the command to act upon.
+command [options…] [arguments…]
+-> Argument: An argument can be used to specify something for the command to act upon.
+ex. ls Picture; Picture is an argument.
+-> Options can be used to alter the behavior of a command.
+ex. ls -a; -a is a option
 '''
 
 echo Hello world						# print string in the terminal
