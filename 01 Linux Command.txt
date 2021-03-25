@@ -1,4 +1,5 @@
 '''
+Shell: Text interface, the Command Line is a program called Shell; Bash Shell
 command [options…] [arguments…]
 -> Argument: An argument can be used to specify something for the command to act upon.
 ex. ls Picture; Picture is an argument.
@@ -6,14 +7,28 @@ ex. ls Picture; Picture is an argument.
 ex. ls -a; -a is a option
 '''
 
+### OPTIONS ###
+-t 			# will sort the files by timestamp ex. $ls -lt== $ls -l -t
+-S 			# will sort the files by file size
+-r 			# will reverse the order of any type of sort
+
+
+
+
+
 echo Hello world						# print string in the terminal
 ls > /path/to/file/filename					# save something as text
+
+
+
+
 ### PROCESS ###
 
 watch free -h							# check performance
 service <name of the app> <start, stop, restart, status>	# i.e service ssh start
 service --status-all						# list of runing services
-ps aux								# all process list							
+ps aux								# all process list
+ps -e								# every process
 killall <program_name>						# i.e $killall firefox; killes all firefox process
 kill <pid>							# killes process
 
@@ -54,8 +69,6 @@ clt+r                               # redo
 whatis <name of a command>                      # i.e $whatis pwd will show information about the command pwd
 history                                         # prints the 1000 unique command history
 locate <name>                                   # locate files 
-ifconfig                                        # ip related information, sudo apt install net-tools --> if $ifconfig command not found
-hostname -I					# IP address
 shutdown [OPTION]... TIME [MESSAGE]		# e.g sudo shutdown -h +3; The system is going DOWN for system halt in 3 minutes!
 sudo shutdown -h now				# shutdown immediately
 shutdown                                        # shutdown after 1 minute
@@ -65,15 +78,24 @@ sudo reboot					# reboot
 # DIRECTORY & FILE #
 touch <file name>                               # i.e $touch test.sh creates a file name test.sh
 cd                                              # change directory
-mkdir                                           # make directory
+mkdir [directory name]				# make directory
 pwd                                             # present working directory
 ls                                              # list of files and folders
 ls -a                                           # list along with hidden files
 ls -all                                         # list along with permission type
+ls -lh						# list of files and folders with size in K,M,G (default is byte)
+cat [options] filename				# view file not recommended for large file
+head [options] filename				# head of a file ex. 
+head -n numberOfLine filename			# head -n 5 filename.txt
+tail [options] filename				# last n number of line
+
+
+
+
 
 # CUT COPY RENAME #
 cp source/directory/filename destinanion/directory	# copy file ex. cp /usr/bin/octave/3.2.4/m/miscellaneous/mkoctfile.m /usr/bin/mkoctfile-3.2.4
-mv source/directory/filename destinanion/directory	# cut move file
+mv source/directory/filename destinanion/directory	# cut move file and rename
 
 
 
@@ -87,6 +109,32 @@ rm /home/vivek/data/*                           	# To delete all files in a dire
 rm -v /home/vivek/data/*                        	# To see what is being done when deliting
 rmdir <directory name>                          	# i.e $rmdir abir deletes abir
 rm -rfv /home/vivek/data/                       	# deletes all files folders from a directory
+
+
+# FILE FOLDERS AND NEVIGATION #
+file filename.txt					# determines file type
+stat fileName.txt					# display ownership modification information etc.
+
+
+# CHANGE PERMISSION  OWNERSHIP #
+...
+sudo chmod [<SET><ACTION><PERMISSIONS>]... FILE
+sudo chown [OPTIONS] [OWNER] FILE 
+SET
+Symbol	Meaning
+u	User: The user who owns the file.
+g	Group: The group who owns the file.
+o	Others: Anyone other than the user owner or member of the group owner.
+ACTION
+a	All: Refers to the user, group and others.
++	Add the permission, if necessary
+=	Specify the exact permission
+-	Remove the permission, if necessary
+PERMISSION
+r	read
+w	write
+x	execute
+...
 
 
 
@@ -106,18 +154,23 @@ sudo usermod -d /home/newHomeDir -m newUsername	# change home-folder
 su - <username>                                 # switch to another user i.e $su - user2
 sudo -i                                         # switch to <root@linlin-mintOS#> $pwd ->root
 sudo -s                                         # switch to <root@linlin-mintOS#> $pwd ->/home/linlin
+sudo -k						# giveup sudo privilege
 sudo sh                                         # login as root switches to <#> $pwd ->/home/linlin
 sudo su <username>                              # i.e $sudo su linlin; switch back to othruser $exit, $logout also works
 $ exit                                          # exit from root
 $ logout                                        # logout of root  
 $ passwd					# change password
+$ passwd -S					# password status information
 sudo passwd <username> -d			# remove a user's password		
 
 
 
 
 # UPDATE #
+apt-get update
+apt-get remove
 sudo apt update & sudo apt upgrade              	# update package manager
+apt list --upgradable					# see upgradeable list
 sudo apt full-upgrade					#upgrade the system by removing/installing/upgrading packages
 apt list --upgradable					# check upgradable package
 # INSTALL #
@@ -138,6 +191,11 @@ pacman -Q			# pacman-based distributions (Arch Linux, etc)
 
 
 
+
+### NETWORKING ###
+ifconfig                                        # ip related information, sudo apt install net-tools --> if $ifconfig command not found
+hostname -I					# IP address
+ping -c #ofTimeTo ping IP			# ex $ping -c 4 192.168.1.2
 
 
 
