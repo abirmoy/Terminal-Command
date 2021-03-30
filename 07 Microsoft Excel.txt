@@ -3,6 +3,8 @@ SUM(START:END)
 AVERAGE(START:END)
 MAX()
 MIN()
+ISTEXT()
+ISNUMBER()
 
 
 
@@ -19,6 +21,8 @@ Select Row>Tab:Home/Data>Sort & Filter>Filter
 =LEFT(A2,3<cell_ref>) &"<any_string/veriabel/cel_ref>"& RIGHT(<cell_ref>)
 
 ### VLOOKUP ###
+VLOOKUP(basecell,SELECT target_column_range, DIFFERENCE btween_targeted_columns,0)
+
 Select empty column>select terget column>click FX>select VLOOKUP>OK
 Lookup Value:select colum>Table array:Select target columns>
 col_inde_num:difference of between target columns>range lookup:0
@@ -34,5 +38,5 @@ Select Column>Tab:Data>Section:Data Tools>Remove Duplicates
 
 ### VERIABLE ###
 &veriable&
-
+$D$3*E3			# will keep cell D3 as constant
 ="a &variable& within string"
