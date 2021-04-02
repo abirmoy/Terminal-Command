@@ -116,7 +116,7 @@ file filename.txt					# determines file type
 stat fileName.txt					# display ownership modification information etc.
 
 
-# CHANGE PERMISSION  OWNERSHIP #
+# CHANGE PERMISSION OWNERSHIP #
 ...
 sudo chmod [<SET><ACTION><PERMISSIONS>]... FILE
 sudo chown [OPTIONS] [OWNER] FILE 
@@ -200,8 +200,13 @@ pacman -Q			# pacman-based distributions (Arch Linux, etc)
 ### NETWORKING ###
 ifconfig                                        # ip related information, sudo apt install net-tools --> if $ifconfig command not found
 hostname -I					# IP address
-ping -c #ofTimeTo ping IP			# ex $ping -c 4 192.168.1.2
+ping -c <#of_time_to_ping> IP			# ex $ping -c 4 192.168.1.2
 
+# NMAP #
+nmap localhost					# scans the first 1024 TCP ports
+sudo nmap –sU localhost				# scans UDP ports
+nmap –sV localhost				# Using the –sV switch with the nmap command performs a version detection
+nmap –A localhost				# captured the SSH keys for the host system. The command runs a set of scripts built into Nmap to test specific vulnerabilities.
 
 
 
