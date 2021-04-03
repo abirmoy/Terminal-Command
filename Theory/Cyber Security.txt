@@ -1,3 +1,24 @@
+OSI Model
+1 Physical Layer	- Transmits rew bit stream over the physical medium
+2 Datalink Layer	- Deines format of data on the network
+3 Network Layer		- Decides which physical path the data will take	
+4 Transport Layer	- Transmits data using transmission protocols including TCP and UDP
+5 Session Layer		- Maintains connections and is responsible for controlling ports and sessions
+6 Presentation Layer	- Ensures that data is in a usable format and is where data encryption occurs
+7 Application Layer	- Human computer interaction layer, where applications can access the network services
+
+
+
+Java Vulnerability
+Java operates through an interpreter, the Java Virtual Machine 
+(JVM). The JVM enables the Java program’s functionality. The 
+JVM sandboxes or isolates untrusted code from the rest of the 
+operating system. There are vulnerabilities, which allow 
+untrusted code to go around the restrictions imposed by the 
+sandbox. There are also vulnerabilities in the Java class library, 
+which an application uses for its security. Java is the second 
+biggest security vulnerability next to Adobe’s Flash plugin.
+
 Malware
 Malicious software, or malware, is a term used to describe 
 software designed to disrupt computer operations, or gain access 
@@ -102,9 +123,26 @@ vulnerabilities that are unknown or undisclosed by the software
 vendor. The term zero hour describes 
 the moment when someone discovers the exploit
 
+### Two Types of Encryption ###
+
+Symmetric algorithms - These algorithms use the same pre-shared 
+key, sometimes called a secret key pair, to encrypt and decrypt 
+data. Both the sender and receiver know the pre-shared key before 
+any encrypted communication begins. As shown in Figure 1, 
+symmetric algorithms use the same key to encrypt and decrypt the 
+plaintext. Encryption algorithms that use a common key are 
+simpler and need less computational power.
 
 
-
+Asymmetric algorithms - Asymmetrical encryption algorithms use 
+one key to encrypt data and a different key to decrypt data. 
+One key is public and the other is private. In a public-key 
+encryption system, any person can encrypt a message using the 
+public key of the receiver, and the receiver is the only one that 
+can decrypt it using his private key. Parties exchange secure 
+messages without needing a pre-shared key. 
+Asymmetric algorithms are more complex. These algorithms are 
+resource intensive and slower to execute.
 
 
 
