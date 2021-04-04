@@ -144,10 +144,12 @@ messages without needing a pre-shared key.
 Asymmetric algorithms are more complex. These algorithms are 
 resource intensive and slower to execute.
 
-
-
-
-
+Data Masking
+Data masking technology secures data by replacing sensitive 
+information with a non-sensitive version. The non-sensitive 
+version looks and acts like the original. This means that a 
+business process can use non-sensitive data and there is no need 
+to change the supporting applications or data storage facilities.
 
 
 
