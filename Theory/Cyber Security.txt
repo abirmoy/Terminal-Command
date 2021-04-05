@@ -19,6 +19,17 @@ sandbox. There are also vulnerabilities in the Java class library,
 which an application uses for its security. Java is the second 
 biggest security vulnerability next to Adobe’s Flash plugin.
 
+Authentication Methods
+- Multi-factor Authentication - Mix of What You Know, What You Have, Who You Are
+- What You Know - ex. Password
+- What You Have - ex. Smartcard
+- Who You Are - ex. Biometric Identifiers; There are two types of biometric identifiers:
+Physiological characteristics – these include fingerprints, DNA, 
+face, hands, retina, or ear features
+Behavioral characteristics - include patterns of behavior, 
+such as gestures, voice, typing rhythm, or the way a user walks
+
+
 Malware
 Malicious software, or malware, is a term used to describe 
 software designed to disrupt computer operations, or gain access 
@@ -143,6 +154,22 @@ can decrypt it using his private key. Parties exchange secure
 messages without needing a pre-shared key. 
 Asymmetric algorithms are more complex. These algorithms are 
 resource intensive and slower to execute.
+
+
+Deterrent Controls
+A deterrent is the opposite of a reward. A reward encourages 
+individuals to do the right thing, while a deterrent discourages 
+them from doing the wrong thing. Cyber security professionals and 
+organizations use deterrents to limit or mitigate an action or 
+behavior, but deterrents do not stop them. Access control 
+deterrents discourage cyber criminals from gaining unauthorized 
+access to information systems and sensitive data. Access control 
+deterrents discourage attacking systems, stealing data, or 
+spreading malicious code. Organizations use access control 
+deterrents to enforce cybersecurity policies.
+Deterrents make potential cyber criminals think twice before 
+committing a crime. The figure lists common access control 
+deterrents used in the cybersecurity world.
 
 Data Masking
 Data masking technology secures data by replacing sensitive 
