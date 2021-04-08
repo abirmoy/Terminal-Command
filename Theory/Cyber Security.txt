@@ -178,17 +178,55 @@ version looks and acts like the original. This means that a
 business process can use non-sensitive data and there is no need 
 to change the supporting applications or data storage facilities.
 
+A cryptographic hash function has the following properties:
+The input can be any length.
+The output has a fixed length.
+The hash function is one way and is not reversible.
+Two different input values will almost never result in the same hash values
 
+Salting
+Salting makes password hashing more secure. If two users have the 
+same password, they will also have the same password hashes. A 
+salt, which is a random string of characters, is an additional 
+input to the password before hashing. This creates 
+a different hash result for the two passwords
 
+Lookup Tables
+A lookup table stores the pre-computed hashes of passwords in a 
+password dictionary along with the corresponding password. A 
+lookup table is a data structure that processes hundreds of hash 
+lookups per second.
 
+Reverse Lookup Tables
+This attack allows the cybercriminal to launch a dictionary or 
+brute-force attack on many hashes without the pre-computed lookup 
+table. The cybercriminal creates a lookup table that plots each 
+password hash from the breached account database to a list of 
+users. The cybercriminal hashes each password guess and uses the 
+lookup table to get a list of users whose password matched the 
+cybercriminal’s guess
 
+Rainbow Tables
+Rainbow tables sacrifice hash-cracking speed to make the lookup 
+tables smaller. A smaller table means that the table can store 
+the solutions to more hashes in the same amount of space.
 
+Digital Signature
+A digital signature is a mathematical method used to check the 
+authenticity and integrity of a message, digital document, or 
+software. A digital signature can determine if someone edits a 
+document after the user signs it. 
 
+Code signing
+Code signing - Used to verify the integrity of executable files 
+downloaded from a vendor website. Code signing also uses signed 
+digital certificates to authenticate and verify the identity of 
+the site.
 
-
-
-
-
+Digital certificates
+Digital certificates - Used to verify the identity of an 
+organization or individual to authenticate a vendor website and 
+establish an encrypted connection to exchange confidential data.
 
 
 
