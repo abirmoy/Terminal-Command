@@ -2,7 +2,7 @@ cls					# clear screen
 ...>c./.../dir/B>filename.txt 		# <must write 'dir' before B>list of file in a directory
 
 
-
+secpol.msc				# Run command to open the Local Security Policy tool.
 ### NETWORKING ###
 ipconfig -all				# IP address
 arp -a					# Checks cached mac and IP address in local machine; ARP:Address resollution Protocol
