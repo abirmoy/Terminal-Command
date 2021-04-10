@@ -1,3 +1,4 @@
+
 '''
 Shell: Text interface, the Command Line is a program called Shell; Bash Shell
 command [options…] [arguments…]
@@ -320,6 +321,7 @@ service ssh start
 3. CHECK IP & COPY IP
 ifconfig
 
+/mnt/c/Users/<username>
 
 ### CONNECT TO LINUX FROM CMD ###
 1. Open cmd and type
