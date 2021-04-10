@@ -151,6 +151,8 @@ sudo adduser <username> sudo			# add user sudo permission
 sudo userdel -r <username>			# delete user
 sudo usermod -l newUsername oldUsername		# change username
 sudo usermod -d /home/newHomeDir -m newUsername	# change home-folder
+cat /etc/passwd					# Verify the newly created users in the passwd file
+cat /etc/shadow					# View the created users in the shadow file
 su - <username>                                 # switch to another user i.e $su - user2
 sudo -i                                         # switch to <root@linlin-mintOS#> $pwd ->root
 sudo -s                                         # switch to <root@linlin-mintOS#> $pwd ->/home/linlin

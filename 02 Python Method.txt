@@ -1,3 +1,14 @@
+'''
+SHEBANG
+In computing, a shebang is the character sequence consisting of 
+the characters number sign and exclamation mark ( #!) at the 
+beginning of a script. It is also called sha-bang, hashbang, 
+pound-bang, or hash-pling.
+
+#!/usr/bin/env python3
+
+chmod +x <name_of_the_python_script>	# making the python script excecuteable
+
 ### INTERACTIVE SHELL ###
 py -i name.py
 

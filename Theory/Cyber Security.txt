@@ -228,7 +228,21 @@ Digital certificates - Used to verify the identity of an
 organization or individual to authenticate a vendor website and 
 establish an encrypted connection to exchange confidential data.
 
+Network Operation Center (NOC)
+The Network Operation Center (NOC) is one or more locations 
+containing the tools that provide administrators with a detailed 
+status of the organization’s network. The NOC is ground zero for 
+network troubleshooting, performance monitoring, software 
+distribution and updates, communications management, and device 
+management.
 
+Security Operation Center (SOC) 
+The Security Operation Center (SOC) is a dedicated site that 
+monitors, assesses, and defends the organization’s information 
+systems such as websites, applications, databases, data centers, 
+networks, servers, and user systems. A SOC is a team of security 
+analysts who detect, analyze, respond to, report on, and prevent 
+cybersecurity incidents.
 
 
 
