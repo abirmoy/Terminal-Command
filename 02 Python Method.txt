@@ -51,8 +51,8 @@ In addition you can specify if the file should be handled as binary or text mode
 
 f = open("demofile.txt")				   	# f = open("demofile.txt", "rt"); Because "r" for read, and "t" for text are the default values, you do not need to specify them.
 f.read()						   	# read the whole file
-f.readlines()						   	# Read every lines of the file
 f.readline()						   	# Read one line of the file
+f.readlines()						   	# Read every lines of the file
 f.write("Now the file has more content!")		   	# f = open("demofile2.txt", "a or w")
 f.close()						   	# should always close your files, in some cases, due to buffering, changes made to a file may not show until you close the file.
 
@@ -186,12 +186,15 @@ import os                                                   	# import os library
 os.rename(file_to_rename, 'new_name')                       	# rename file
 os.path.exists(file path or name)                           	# Returns true if the path is a file, directory, or a valid symlink.
 os.remove(file path or name)				    	# remove file
-os.rmdir(file path or name)				    	# remove directory
+os.rmdir(file path or name)				    	# remove directory (directory has to be empty else will raise error)
 os.path.isfile(file path or name)                           	# Returns true if the path is a regular file or a symlink to a file.
+os.path.getsize(file path or name)				# file size
 os.path.isdir(path)                                         	# Returns true if the path is a directory or a symlink to a directory.
 os.getcwd()                                                 	# Returns current working directory
+os.mkdir('name')						# create new directory/folder new folder
 os.chdir(path)                                              	# change directory
 os.listdir(path)                                            	# returns list of the files and subdirectories in the directory passed into the path argument
+os.path.isdir(path)                                         	# Returns true if the path is a directory or a symlink to a directory.
 os.scandir(path)                                            	# returns an iterator as opposed to a list when called
 
 

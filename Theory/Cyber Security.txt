@@ -1,13 +1,22 @@
 OSI Model
 1 Physical Layer	- Transmits rew bit stream over the physical medium
-2 Datalink Layer	- Deines format of data on the network
+2 Datalink Layer	- Defines format of data on the network
 3 Network Layer		- Decides which physical path the data will take	
 4 Transport Layer	- Transmits data using transmission protocols including TCP and UDP
 5 Session Layer		- Maintains connections and is responsible for controlling ports and sessions
 6 Presentation Layer	- Ensures that data is in a usable format and is where data encryption occurs
 7 Application Layer	- Human computer interaction layer, where applications can access the network services
 
+Three Principle of Network Security
+CIA
+Confidentiality
+Integraty
+Availablality
 
+States Of Data
+Data In Rest
+Data In Transit
+Data In Process
 
 Java Vulnerability
 Java operates through an interpreter, the Java Virtual Machine 
@@ -29,6 +38,11 @@ face, hands, retina, or ear features
 Behavioral characteristics - include patterns of behavior, 
 such as gestures, voice, typing rhythm, or the way a user walks
 
+Virus
+A virus is malicious executable code attached to another 
+executable file, such as a legitimate program. Most viruses 
+require end-user initiation, and can activate at a specific 
+time or date. 
 
 Malware
 Malicious software, or malware, is a term used to describe 
@@ -41,11 +55,23 @@ and other malicious programs. Malware may be obvious and simple
 to identify or it can be very stealthy and almost impossible to 
 detect.
 
-Viruse
-A virus is malicious executable code attached to another 
-executable file, such as a legitimate program. Most viruses 
-require end-user initiation, and can activate at a specific 
-time or date. 
+Bot
+From the word robot, a bot is malware designed to 
+automatically perform action, usually online. While most 
+bots are harmless, one increasing use of malicious bots 
+are botnets. Several computers are infected with bots 
+which are programmed to quietly wait for commands 
+provided by the attacker.
+
+Rootkit
+This malware is designed to modify the operating 
+system to create a backdoor. Attackers then use the backdoor 
+to access the computer remotely. Most rootkits take advantage 
+of software vulnerabilities to perform privilege escalation and 
+modify system files. It is also common for rootkits to modify 
+system forensics and monitoring tools, making them very 
+hard to detect. Often, a computer infected by a rootkit 
+must be wiped and reinstalled.
 
 Worms
 Worms are malicious code that replicates by independently 
@@ -62,7 +88,6 @@ game. This malicious code exploits the privileges of the user
 that runs it. A Trojan horse differs from a virus because the 
 Trojan binds itself to non-executable files, such as image files, 
 audio files, or games.
-
 
 Logic Bombs
 A logic bomb is a malicious program that uses a trigger to 
@@ -92,6 +117,8 @@ fear. Scareware forges pop-up windows that resemble operating
 system dialogue windows. These windows convey forged messages 
 stating that the system is at risk or needs the execution of a 
 specific program to return to normal operation. 
+
+
 
 Vishing 
 Vishing is phishing using voice communication technology. 
@@ -127,12 +154,78 @@ Bluejacking is the term used for sending unauthorized messages
 to another Bluetooth device. A variation of this is 
 to send a shocking image to the other device.
 
+Man-In-The-Middle (MitM) 
+MitM allows the attacker to take 
+control over a device without the user’s knowledge. With that level 
+of access, the attacker can intercept and capture user information 
+before relaying it to its intended destination. MitM attacks are widely 
+used to steal financial information. Many malware and techniques 
+exist to provide attackers with MitM capabilities.
+
+Man-In-The-Mobile (MitMo)
+A variation of man-in-middle, MitMo 
+is a type of attack used to take control over a mobile device. When 
+infected, the mobile device can be instructed to exfiltrate 
+user-sensitive information and send it to the attackers. ZeuS, 
+an example of an exploit with MitMo capabilities, allows 
+attackers quietly to capture 2-step verification SMS messages 
+sent to users.
+
 Zero-day attack
 A zero-day attack, sometimes referred to as a zero-day threat, 
 is a computer attack that tries to exploit software 
 vulnerabilities that are unknown or undisclosed by the software 
 vendor. The term zero hour describes 
 the moment when someone discovers the exploit
+
+Honeypots
+A Honeypot is a behavior-based detection tool that first lures 
+the attacker in by appealing to the attacker’s predicted pattern 
+of malicious behavior, and then, when inside the honeypot, the 
+network administrator can capture, log, and analyze the 
+attacker’s behavior. This allows an administrator to gain more 
+knowledge and build a better defense.
+
+### The Kill Chain in Cyberdefense ###
+In cybersecurity, the Kill Chain is the stages of an information systems 
+attack. Developed by Lockheed Martin as a security framework for 
+incident detection and response, the Cyber Kill Chain is comprised 
+of the following stages:
+
+Stage 1. Reconnaissance - The attacker gathers information 
+about the target.
+
+Stage 2. Weaponization - The attacker creates an exploit and 
+malicious payload to send to the target.
+
+Stage 3. Delivery - The attacker sends the exploit and malicious 
+payload to the target by email or other method.
+
+Stage 4. Exploitation - The exploit is executed.
+
+Stage 5 Installation - Malware and backdoors are installed on the target.
+
+Stage 6. Command and Control - Remote control of the target is gained 
+through a command and control channel or server.
+
+Stage 7. Action - The attacker performs malicious actions like 
+information theft, or executes additional attacks on other devices 
+from within the network by working through the Kill Chain stages again.
+
+### NETFLOW ###
+NetFlow technology is used to gather information about data flowing 
+through a network. NetFlow information can be likened to a phone bill 
+for your network traffic. It shows you who and what devices are in your 
+network, as well as when and how users and devices accessed your 
+network. NetFlow is an important component in behavior-based 
+detection and analysis. Switches, routers, and firewalls equipped with 
+NetFlow can report information about data entering, leaving, and travelling 
+through the network. Information is sent to NetFlow Collectors that 
+collect, store, and analyze NetFlow records.
+NetFlow is able to collect information on usage through many different 
+characteristics of how data is moved through the network. By collecting 
+information about network data flows, NetFlow is able to establish 
+baseline behaviors on more than 90 different attributes.
 
 ### Two Types of Encryption ###
 

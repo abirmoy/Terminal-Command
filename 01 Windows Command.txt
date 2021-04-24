@@ -1,4 +1,6 @@
 cls					# clear screen
+more filename.txt			# read text file inside CLI
+type filename.txt			# read text file inside CLI
 ...>c./.../dir/B>filename.txt 		# <must write 'dir' before B>list of file in a directory
 
 
