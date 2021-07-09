@@ -70,7 +70,9 @@ deactivate #for deactivating from anywhere
 #### RUNNING FLASK ####
 
 flask run     #FOR RUNNING FLASK SERVER
+flask run -h x.x.x.x -p xxxx
 set FLASK_APP=microblog.py      #FLASK_APP ENVIRONMENT VARIABLE
+
 
 
 

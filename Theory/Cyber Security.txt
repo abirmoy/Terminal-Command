@@ -338,6 +338,14 @@ analysts who detect, analyze, respond to, report on, and prevent
 cybersecurity incidents.
 
 
+AAA Standard
+AAA stands for Authentication, Authorization, and Accounting. 
+AAA provides the primary framework to set up access control 
+on a network device. AAA is a way to control who is permitted 
+to access a network (authenticate), what they can do while 
+they are there (authorize), and to audit what actions they 
+performed while accessing the network (accounting).
+
 
 
 
