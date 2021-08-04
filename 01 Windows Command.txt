@@ -1,21 +1,29 @@
-cls					# clear screen
-more filename.txt			# read text file inside CLI
-type filename.txt			# read text file inside CLI
-...>c./.../dir/B>filename.txt 		# <must write 'dir' before B>list of file in a directory
+cls								# clear screen
+more filename.txt						# read text file inside CLI
+type filename.txt						# read text file inside CLI
+...>c./.../dir/B>filename.txt 					# <must write 'dir' before B>list of file in a directory
 
 
-secpol.msc				# Run command to open the Local Security Policy tool.
+secpol.msc							# Run command to open the Local Security Policy tool.
 ### NETWORKING ###
-ipconfig -all				# IP address
-arp -a					# Checks cached mac and IP address in local machine; ARP:Address resollution Protocol
-arp –s  <ip_address> <physical_address> # binding mac address
-arp –d  <ip_address> <physical_address> # deleting an entry
+ipconfig -all							# IP address
+arp -a								# Checks cached mac and IP address in local machine; ARP:Address resollution Protocol
+arp –s  <ip_address> <physical_address> 			# binding mac address
+arp –d  <ip_address> <physical_address> 			# deleting an entry
+
+# Wi-Fi SAVED PASSWORD
+1.
+netsh wlan show profiles					# show all the Wifi profiles saved on computer
+2.
+netsh wlan show profile name=<WifiConnectionName> key=clear	# Replace WifiConnectionName with Wifi SSID which you can find from the above mentioned command(Step 1)
+or for password only
+netsh wlan show profile name=<WifiConnectionName> key=clear | find /I "Key Content"
 
 
 
 ### CONNECT TO LINUX FROM CMD ###
 1. Open cmd and type
-ssh <username>@<ip>                   # ie. ssh abc@168.xxx.xxx.xxx 
+ssh <username>@<ip>                   				# ie. ssh abc@168.xxx.xxx.xxx 
 
 
 
