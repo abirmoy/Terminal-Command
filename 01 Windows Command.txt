@@ -11,6 +11,8 @@ arp -a								# Checks cached mac and IP address in local machine; ARP:Address r
 arp –s  <ip_address> <physical_address> 			# binding mac address
 arp –d  <ip_address> <physical_address> 			# deleting an entry
 netstat -rn							# routing table
+nslookup <exmpl.com>						# find IP address of a domain
+
 # Wi-Fi SAVED PASSWORD
 1.
 netsh wlan show profiles					# show all the Wifi profiles saved on computer
