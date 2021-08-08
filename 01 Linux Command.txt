@@ -238,7 +238,7 @@ clt+alt+t                                       	# open new terminal window
 shift+clt+'+/-'						# Zoomin Zoomout  
 clt+l                                           	# clear terminal
 clt+d                                           	# close the terminal
-clt+c                                           	# get out of any continous process in the terminal
+clt+c or q                                           	# get out of any continous process in the terminal
 clt+alt+↑						# maximize window fullscreen
 
 
