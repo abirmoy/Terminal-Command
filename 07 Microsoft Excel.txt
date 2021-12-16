@@ -46,6 +46,7 @@ $D$3*E3			# will keep cell D3 as constant
 ### MACROS ###
 #Tutorial Blogpost 
 https://www.dummies.com/article/technology/software/microsoft-products/excel/how-to-create-custom-excel-functions-138829
-
 #URL unwrap functions
 https://superuser.com/questions/430260/excel-convert-a-column-with-hyperlinks-to-just-display-the-links
+#How to Create Custom Excel Functions
+https://www.dummies.com/article/technology/software/microsoft-products/excel/how-to-create-custom-excel-functions-138829
