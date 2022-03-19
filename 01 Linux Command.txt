@@ -12,6 +12,7 @@ ex. ls -a; -a is a option
 -t 			# will sort the files by timestamp ex. $ls -lt== $ls -l -t
 -S 			# will sort the files by file size
 -r 			# will reverse the order of any type of sort
+-n			# will show line number
 
 
 
@@ -168,6 +169,7 @@ $ passwd -S					# password status information
 sudo passwd <username> -d			# remove a user's password		
 # GROUP #
 cat /etc/group					# check group list
+group <username>				# check a user belong to which group
 groupadd <groupname>				# adding user group
 usermod –G <groupname> <username>		# adding user to a group
 cat /etc/passwd					# Verify the newly created users in the passwd file
@@ -211,6 +213,27 @@ https://www.binarytides.com/linux-commands-monitor-network/
 2. Bandwidth per socket connection - iftop, iptraf, tcptrack, pktstat, netwatch, trafshow
 
 3. Bandwidth per process - nethogs
+
+
+
+Connect to Wi-Fi Through the Linux Terminal With Nmcli
+https://www.makeuseof.com/connect-to-wifi-with-nmcli/
+
+1. sudo apt-get update
+2. sudo apt-get install network-manager						# Install NetworkManager, and number of other packages as well including nmcli
+
+Step 1: Enable Wi-Fi Device
+nmcli dev status								# To see the status of all your network interfaces
+1. nmcli radio wifi								# Check Wi-Fi device is enabled or not
+2. nmcli radio wifi on								# If the output of "$nmcli radio wifi" shows that the Wi-Fi is disabled, can enable it with this command
+
+Step 2: Identify a Wi-Fi Access Point
+1. nmcli dev wifi list								# Identify a Wi-Fi Access Point, also known as the SSID
+
+Step 3: Connect to Wi-Fi
+1. sudo nmcli dev wifi connect <network-ssid>					# To establish a connection
+or
+sudo nmcli dev wifi connect <network-ssid> password "<network-password>"	# If you have WEP or WPA security on your WI-Fi, you can specify the network password in the command as well.
 ...
 
 

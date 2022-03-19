@@ -40,8 +40,25 @@ Select Column>Tab:Data>Section:Data Tools>Remove Duplicates
 &veriable&
 ="a"&variable
 $D$3*E3			# will keep cell D3 as constant
-="a &variable& within double quote"
+="a" &variable& "within double quote" ; ="'"&N3&"',"
 
+
+###GetUrl
+VBA
+Here's a VBA solution for those who can use it.
+
+Create a VBA module with the following code:
+
+Public Function GetURL(c As Range) As String
+    On Error Resume Next
+    GetURL = c.Hyperlinks(1).Address
+End Function
+To use, enter the following into any cell:
+
+=GetURL(A1)
+
+Press Alt + F11 to show the Visual Basic Editor. Then click "Insert -> Module". Paste the code Above
+https://superuser.com/questions/430260/excel-convert-a-column-with-hyperlinks-to-just-display-the-links
 
 ### MACROS ###
 #Tutorial Blogpost 
