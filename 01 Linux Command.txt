@@ -96,9 +96,9 @@ tail [options] filename				# last n number of line
 
 
 # CUT COPY RENAME #
-cp source/directory/filename destinanion/directory	# copy file ex. cp /usr/bin/octave/3.2.4/m/miscellaneous/mkoctfile.m /usr/bin/mkoctfile-3.2.4
-mv source/directory/filename destinanion/directory	# cut move file and rename
-
+cp source/directory/filename destinanion/directory	# copy file ex. cp /usr/bin/octave
+mv source/directory/filename destinanion/directory	# cut move file  
+mv example1.txt example2.txt										# rename file 
 
 
 
