@@ -13,6 +13,7 @@ ex. ls -a; -a is a option
 -S 			# will sort the files by file size
 -r 			# will reverse the order of any type of sort
 -n			# will show line number
+-v			# To see what is being done while executing a cmd
 
 
 
@@ -98,7 +99,7 @@ tail [options] filename				# last n number of line
 # CUT COPY RENAME #
 cp source/directory/filename destinanion/directory	# copy file ex. cp /usr/bin/octave
 mv source/directory/filename destinanion/directory	# cut move file  
-mv example1.txt example2.txt										# rename file 
+mv example1.txt example2.txt				# rename file 
 
 
 
@@ -106,11 +107,11 @@ mv example1.txt example2.txt										# rename file
 # DELETE FILE FOLDERS #
 -r : Remove directories and their contents recursively
 -f : Force option i.e. ignore nonexistent files and arguments, never prompt
--v : Verbose option
-rm /home/vivek/data/*                           	# To delete all files in a directory named /home/vivek/data/
-rm -v /home/vivek/data/*                        	# To see what is being done when deliting
-rmdir <directory name>                          	# i.e $rmdir abir deletes abir
-rm -rfv /home/vivek/data/                       	# deletes all files folders from a directory
+-v : Verbose option								# To see what is being done while executing a cmd
+rm /home/vivek/data/*                           				# To delete all files in a directory named /home/vivek/data/
+rm -v /home/vivek/data/*                        				# To see what is being done when deliting
+rmdir <directory name>                          				# i.e $rmdir abir deletes abir
+rm -rfv /home/vivek/data/                       				# deletes all files folders from a directory
 
 
 # FILE FOLDERS AND NEVIGATION #
