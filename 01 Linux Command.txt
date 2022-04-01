@@ -9,11 +9,13 @@ ex. ls -a; -a is a option
 '''
 
 ### OPTIONS ###
+
 -t 			# will sort the files by timestamp ex. $ls -lt== $ls -l -t
 -S 			# will sort the files by file size
 -r 			# will reverse the order of any type of sort
 -n			# will show line number
 -v			# To see what is being done while executing a cmd
+
 
 
 
@@ -91,6 +93,24 @@ cat [options] filename				# view file not recommended for large file
 head [options] filename				# head of a file ex. 
 head -n numberOfLine filename			# head -n 5 filename.txt
 tail [options] filename				# last n number of line
+
+
+
+# DISK USAGES #
+-h:	human readable, GB
+-s:	summarize
+-k:	kilobyte
+-m:	megabyte
+-time:	time of the last modification
+
+df						# Check File System Disk Space Usage
+df -h						# Check File System Disk Space Usage -h, --human-readable; -k=kilobyte, -m=megabyte, -h=all file system statistics in GB (Gigabyte)
+du						# disk usage
+du -h						# disk usage , -h, --human-readable, The -h flag prints size outputs
+du -time					# It shows the time of the last modification to any file in the directory or subdirectory
+du -a						# disk usage,  It lists the sizes of all files and directories in the given file path. often combined with -h; du -ah
+du -s						# disk usage, -s, --summarize
+
 
 
 
