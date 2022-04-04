@@ -61,6 +61,37 @@ clt+r                               # redo
 %s/<search>/<replace>/gc            # replace string
 %s/<search>/<replace>/g             # replace string with out confirmation prompt
 
+# COPY
+yy - Yank (copy) the current line, including the newline character.
+3yy - Yank (copy) three lines, starting from the line where the cursor is positioned.
+y$ - Yank (copy) everything from the cursor to the end of the line.
+y^ - Yank (copy) everything from the cursor to the start of the line.
+yw - Yank (copy) to the start of the next word.
+yiw – Yank (copy) the current word.
+y% - Yank (copy) to the matching character. By default supported pairs are (), {}, and []. Useful to copy text between matching brackets.
+
+# CUT (Deleting) 
+dd - Delete (cut) the current line, including the newline character.
+3dd - Delete (cut) three lines, starting from the line where the cursor is positioned,
+d$ - Delete (cut) everything from the cursor to the end of the line.
+
+Place the cursor on the line you want to begin copping or cutting.
+
+The visual mode has three subtypes.
+
+Press v to enter the visual mode.
+Press V to enter visual line mode, where the text is selected by line.
+Press Ctrl+v to enter visual block mode. In this mode, the text is selected by rectangle blocks.
+Entering the visual mode also marks a starting selection point.
+
+Move the cursor to the end of the text you want to copy or cut. You can use a movement command or up, down, right, and left arrow keys.
+Press y to copy, or d to cut the selection.
+
+Move the cursor to the location where you want to paste the contents.
+
+Press P to paste the contents before the cursor, or p to paste it after the cursor.
+
+
 
 
 
