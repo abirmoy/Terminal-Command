@@ -60,7 +60,6 @@ wsl -l -v					# list of installed OS: name, state, version
 # WSL Problem #
 Problem: WslRegisterDistribution failed with error: 0xc03a001a Error: 0xc03a001a The requested operation could not be completed due to a virtual disk system limitation. Virtual hard disk files must be uncompressed and unencrypted and must not be sparse.
 Solution:
-https://stackoverflow.com/questions/65891322/install-windows-subsystem-for-linux-and-get-error-0xc03a001a-and-a-long-list-or
 Essentially... find the package under C:\Users\AppData\Local\Packages and right click the folder, check advanced options and disable compression. Run the launch again.
 
 Of course ubuntu is listed under "CanonicalGroupLimited.Ubuntu" so if you sort alphabetically it will appear under "C"
