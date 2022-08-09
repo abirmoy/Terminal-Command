@@ -1,7 +1,10 @@
 how to add github to GIT
 https://docs.github.com/en/authentication/connecting-to-github-with-ssh
 
-
+ssh-keygen -t ed25519 -C "your_email@example.com"
+ssh-add ~/.ssh/id_ed25519
+$ clip < ~/.ssh/id_ed25519.pub
+# Copies the contents of the id_ed25519.pub file to your clipboard
 
 …or create a new repository on the command line
 echo "# s" >> README.md

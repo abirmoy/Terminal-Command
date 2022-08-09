@@ -6,6 +6,29 @@ ssh-add ~/.ssh/id_ed25519
 $ clip < ~/.ssh/id_ed25519.pub
 # Copies the contents of the id_ed25519.pub file to your clipboard
 
+# Setting Upg GIT
+https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+
+ssh-keygen -t ed25519 -C "your_email@example.com"
+
+https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account
+
+clip < ~/.ssh/id_ed25519.pub
+
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "n.abirmoy@gmail.com"
+  git config --global user.name "Abirmoy"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'nabir@Abirmoy.(none)')
+
+
 …or create a new repository on the command line
 echo "# s" >> README.md
 git init
