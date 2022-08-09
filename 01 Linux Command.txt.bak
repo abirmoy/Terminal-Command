@@ -21,7 +21,7 @@ ex. ls -a; -a is a option
 
 
 
-echo Hello world						# print string in the terminal
+echo Hello world							# print string in the terminal
 ls > /path/to/file/filename					# save something as text
 
 
@@ -29,7 +29,7 @@ ls > /path/to/file/filename					# save something as text
 
 ### PROCESS ###
 
-watch free -h							# check performance
+watch free -h								# check performance
 service <name of the app> <start, stop, restart, status>	# i.e service ssh start
 service --status-all						# list of runing services
 ps aux								# all process list
