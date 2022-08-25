@@ -76,3 +76,19 @@ Type sudo apt-get install openssh-server
 Enable the ssh service by typing sudo systemctl enable ssh
 Start the ssh service by typing sudo systemctl start ssh
 Test it by login into the system using ssh user@server-name
+
+
+### Disable ‘Show More Options’ in Windows 11 ###
+https://www.technewstoday.com/show-more-options-windows-11/
+
+# Disabling “Show More Option” via the Command Prompt:
+1.Launch the elevated command prompt. (Press Win + R, type in cmd and press Ctrl + Shift + Enter)
+2.Input the following code in the command prompt and press enter:
+reg add HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32 /ve /d "" /f
+3.Restart Windows Explorer.
+
+# Enable “Show more options” Back in the Right-Click Context Menu
+1.Press Win + R and type in regedit.
+2.Navigate to: HKEY_CURRENT_USER\SOFTWARE\CLASSES\CLSID.
+3.Delete the key: {86ca1aa0-34aa-4e8b-a509-50c905bae2a2}.
+4.Restart Windows Explorer.

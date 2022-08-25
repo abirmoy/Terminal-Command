@@ -92,3 +92,7 @@ reg add HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\Inpro
 2.Navigate to: HKEY_CURRENT_USER\SOFTWARE\CLASSES\CLSID.
 3.Delete the key: {86ca1aa0-34aa-4e8b-a509-50c905bae2a2}.
 4.Restart Windows Explorer.
+
+
+### Disable Prompting Boot Option ###
+BCDEDIT -SET {BOOTMGR} displaybootmenu NO
