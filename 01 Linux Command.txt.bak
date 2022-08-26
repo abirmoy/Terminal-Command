@@ -231,7 +231,6 @@ cat /etc/shadow					# View the created users in the shadow file
 # UPDATE #
 apt-get update
 apt-get remove
-sudo apt-get autoremove					# The autoremove option removes packages that were automatically installed because some other package required them but, with those other packages removed, they are no longer needed.
 sudo apt update & sudo apt upgrade              	# update package manager
 apt list --upgradable					# see upgradeable list
 sudo apt full-upgrade					#upgrade the system by removing/installing/upgrading packages
