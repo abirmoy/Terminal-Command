@@ -267,6 +267,11 @@ https://www.binarytides.com/linux-commands-monitor-network/
 
 3. Bandwidth per process - nethogs
 
+netstat
+
+
+### OTHERS ###
+bash $PATH						# bash path
 
 
 Connect to Wi-Fi Through the Linux Terminal With Nmcli
@@ -433,6 +438,10 @@ Open Remote Desktop in Windows Enter IP of followed by Username and Password of 
 ### Upgrading Raspberry Pi ###
 https://www.makeuseof.com/tag/raspberry-pi-update-raspbian-os/
 
+
+### Stop assigning random MAC on Raspberry Pi ###
+https://raspberrypi.stackexchange.com/questions/68513/pi-using-a-random-mac-address-after-every-reboot-how-do-i-stop-this-behavior
+sudo apt-get remove network-manager
 
 
 
