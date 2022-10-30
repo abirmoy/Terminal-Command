@@ -13,7 +13,7 @@ arp –d  <ip_address> <physical_address> 			# deleting an entry
 netstat -rn							# routing table
 nslookup <exmpl.com>						# find IP address of a domain
 
-# Wi-Fi SAVED PASSWORD
+# Wi-Fi wifi SAVED PASSWORD
 1.
 netsh wlan show profiles					# show all the Wifi profiles saved on computer
 2.
