@@ -1,5 +1,6 @@
 cls								# clear screen
 -h								# for help
+systeminfo | find "System Type" # Check system architecture 
 more filename.txt						# read text file inside CLI
 type filename.txt						# read text file inside CLI
 ...>c./.../dir/B>filename.txt 					# <must write 'dir' before B>list of file in a directory
@@ -46,6 +47,9 @@ https://docs.microsoft.com/en-us/windows/wsl/install-manual
 
 # UPDATING LINUX KERNEL #
 https://docs.microsoft.com/en-us/windows/wsl/wsl2-kernel
+
+# WSL UPDATE
+wsl --update 
 
 # ENABLEING WSL2 #
 https://docs.microsoft.com/en-us/windows/wsl/install-win10
