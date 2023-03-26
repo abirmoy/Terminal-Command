@@ -83,6 +83,24 @@ Start the ssh service by typing sudo systemctl start ssh
 Test it by login into the system using ssh user@server-name
 
 
+### Mount a USB drive in Windows Sandbox ###
+
+Create a new text file on your desktop and name it sandbox.wsb.
+Open the file in a text editor and paste the following code:
+<Configuration>
+    <MappedFolders>
+        <MappedFolder>
+            <HostFolder>DRIVE_LETTER:\</HostFolder>
+            <ReadOnly>true</ReadOnly>
+        </MappedFolder>
+    </MappedFolders>
+</Configuration>
+Replace DRIVE_LETTER with the letter of your USB drive (e.g., E).
+Save and close the file.
+Double-click the sandbox.wsb file to launch Windows Sandbox with the mounted USB drive.
+This will mount your USB drive as a folder in Windows Sandbox, allowing you to access its contents. Note that the <ReadOnly> tag is set to true, which means that you will only be able to read files from the USB drive and not write to it. If you want to be able to write to the USB drive, change this value to false.
+
+
 ### Disable ‘Show More Options’ in Windows 11 ###
 https://www.technewstoday.com/show-more-options-windows-11/
 
@@ -101,3 +119,5 @@ reg add HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\Inpro
 
 ### Disable Prompting Boot Option ###
 BCDEDIT -SET {BOOTMGR} displaybootmenu NO
+
+
