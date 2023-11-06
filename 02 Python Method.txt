@@ -162,6 +162,12 @@ a.intersection(b)
 a.difference(b)
 a.symmetric_difference(b)					# returns the uniqe eliments of the sets 
 
+# sort a nested list by their item
+https://stackoverflow.com/questions/409370/sorting-and-grouping-nested-lists-in-python?answertab=votes#tab-top
+from operator import itemgetter
+x.sort(key=itemgetter(1))
+from itertools import groupby
+y = groupby(x, itemgetter(1))
 
 
 ### BOOLEAN ###
