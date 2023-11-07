@@ -73,7 +73,7 @@ str(anything)						    	# doesn't mutate, returns String
 string.split(separator, maxsplit)			    	# doesn't mutate, returns list of string; separator - Optional. Specifies the separator to use when splitting the string. By default any whitespace is a separator; maxsplit - Optional. Specifies how many splits to do. Default value is -1, which is "all occurrences"
 string.ascii_lowercase					    	# returns alphabet a-z as string
 string.ascii_uppercasecase				    	# returns alphabet A-Z as string
-.replace(old, new, count)                                   	# returns a copy of the string; old – old substring you want to replace, new – new substring which would replace the old substring, count – the number of times you want to replace the old substring with the new substring. (Optional )    
+.replace(old, new, count)                                   	# returns a copy of the string; old – old substring you want to replace, new – new substring which would; replace the old substring, count – the number of times you want to replace the old substring with the new substring. (Optional )    ex. str=a_b_c; str.replace("_", " ");>>a b c
 str.find(sub,start,end)					    	# returns the lowest index of the substring if it is found in given string. If its is not found then it returns -1.
 str.rfind(sub,start,end)				    	# same as .find() but starts finding from -1 index to 0
 
