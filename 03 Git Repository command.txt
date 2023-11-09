@@ -6,7 +6,7 @@ ssh-add ~/.ssh/id_ed25519
 $ clip < ~/.ssh/id_ed25519.pub
 # Copies the contents of the id_ed25519.pub file to your clipboard
 
-# Setting Upg GIT
+# Setting Up GIT
 https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
 
 ssh-keygen -t ed25519 -C "your_email@example.com"
@@ -14,6 +14,23 @@ ssh-keygen -t ed25519 -C "your_email@example.com"
 https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account
 
 clip < ~/.ssh/id_ed25519.pub
+
+
+
+
+### GIT IGNORE ###
+https://www.freecodecamp.org/news/gitignore-file-how-to-ignore-files-and-folders-in-git/
+
+touch .gitignore	# creating .gitignore file 
+
+/text.txt		# ingnore the file /text.txt in root directory
+text.txt		# ignore any file text.txt within the repository
+/test/text.txt		# ingnore the file text.txt in /test directory
+test/			# ingore the /test directory
+img*			# ignore all files and directories that have a name starting with img
+*.mp3			# This pattern will match any file ending with the .mp3 extension located anywhere in the project.
+!atheme.mp3		# exclamation mark, !, to negate a file that would otherwise be ignored. if don't want Git to ignore a atheme.mp3 file after doing *.mp3 (it doesn't work if the entire folder is ignored)
+!test/example.md	# negate a file inside an ignored directory won't work
 
 
 *** Please tell me who you are.
@@ -38,7 +55,10 @@ git remote add origin git@github.com:abirmoy/s.git
 git push -u origin master
 …or push an existing repository from the command line
 git remote add origin git@github.com:abirmoy/s.git
-git push -u origin master
+git push -u origin main
+
+git pull
+git pull --allow-unrelated-histories
 
 
 git push -u origin master --force
@@ -51,6 +71,12 @@ git checkout <branch-name>					# switchs branch
 git merge <branch-name>
 git branch -d <branch-name>					# deletes branch
 git push -u origin <branch-name>
+
+# DELETE & RENAME #
+git branch -d <branch_name>					# deletes local branch; To remove a local branch, This command will only delete the branch if it has already been merged with its upstream branch. If you want to force the deletion of the branch, even if it has not been merged, you can use the -D option instead of -d.
+git push origin --delete <branch_name>				# deletes a remote branch
+
+
 
 
 ### Mirroring a Repository ###
