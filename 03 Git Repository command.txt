@@ -26,11 +26,23 @@ touch .gitignore	# creating .gitignore file
 /text.txt		# ingnore the file /text.txt in root directory
 text.txt		# ignore any file text.txt within the repository
 /test/text.txt		# ingnore the file text.txt in /test directory
-test/			# ingore the /test directory
+test/			# ingore the /test directory and any directory name test
 img*			# ignore all files and directories that have a name starting with img
 *.mp3			# This pattern will match any file ending with the .mp3 extension located anywhere in the project.
 !atheme.mp3		# exclamation mark, !, to negate a file that would otherwise be ignored. if don't want Git to ignore a atheme.mp3 file after doing *.mp3 (it doesn't work if the entire folder is ignored)
 !test/example.md	# negate a file inside an ignored directory won't work
+
+# BASH CMD FOR IGNORING FILES LARGER THAN 100M SIZE
+find . -size +100M | sed 's|^\./||' >> .gitignore
+
+This command works as follows:
+•  find . -size +100M: Finds all files in the current directory and subdirectories that are larger than 100MB.
+
+•  sed 's|^\./||': Removes the leading ./ from the file paths output by find.
+
+•  >> .gitignore: Appends the resulting file paths to the .gitignore file.
+
+Before running this command, make sure you're in the root directory of your Git repository. Also, be aware that this will append to your .gitignore file, so if you run it multiple times, you may get duplicate entries. You might want to review the .gitignore file after running this command to ensure it only contains the entries you want. If you're using a shared repository, communicate with your team before making changes to .gitignore to avoid any unexpected behavior for other collaborators.
 
 
 *** Please tell me who you are.
@@ -127,4 +139,31 @@ $ clip < ~/.ssh/id_rsa.pub
 # Copies the contents of the id_rsa.pub file to your clipboard
 6. navigate to github>settings>SSH and GPG keys>add key
 
+
+
+### RECOVER DELETED FILE ###
+To recover files that you have deleted and committed the deletion in Git, you can use the git checkout command if you know the commit hash before the deletion, or you can find the last commit that affected the given path and then restore the file from there. Here's a step-by-step guide:
+
+1. 
+Find the commit where the file was deleted:
+
+git log --diff-filter=D --summary
+
+This command will list commits that include deletions. Look for the commit where your file was deleted.
+
+1. 
+Once you've found the commit, you can restore the file from the commit just before the deletion:
+
+git checkout <deleting_commit>^ -- <file_path>
+
+Replace <deleting_commit> with the hash of the commit where the file was deleted, and <file_path> with the path to the file you want to restore.
+
+1. 
+If you want to restore all the deleted files from that commit, you can do:
+
+git checkout <deleting_commit>^ -- .
+
+This will restore all the files that were deleted in that commit to your current working directory.
+
+Remember, if you have already pushed the commit with the deletions to a remote repository, it's better to create a new commit that reverts the deletions instead of altering the historyhttps://www.git-tower.com/learn/git/faq/restoring-deleted-files/https://stackoverflow.com/questions/953481/how-do-i-find-and-restore-a-deleted-file-in-a-git-repository. If you're unsure about any step, it's always a good idea to backup your current work or consult with a more experienced Git user.
 
