@@ -32,6 +32,13 @@ img*			# ignore all files and directories that have a name starting with img
 !atheme.mp3		# exclamation mark, !, to negate a file that would otherwise be ignored. if don't want Git to ignore a atheme.mp3 file after doing *.mp3 (it doesn't work if the entire folder is ignored)
 !test/example.md	# negate a file inside an ignored directory won't work
 
+# making any file not to trach anymore
+git rm --cached <file>
+
+Replace <file> with the path to the actual file you want to stop tracking. After running this command, the file will remain in your local workspace but will be removed from the index, so it won't be included in future commits. Don't forget to commit this change and push it to the remote repository if neededhttps://stackoverflow.com/questions/1274057/how-do-i-make-git-forget-about-a-file-that-was-tracked-but-is-now-in-gitignore.
+
+
+
 # BASH CMD FOR IGNORING FILES LARGER THAN 100M SIZE
 find . -size +100M | sed 's|^\./||' >> .gitignore
 
