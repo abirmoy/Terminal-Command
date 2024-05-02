@@ -1,3 +1,4 @@
+jupyter lab
 '''
 SHEBANG
 In computing, a shebang is the character sequence consisting of 
@@ -112,11 +113,13 @@ list(something)                                             	# doesn't mutate ie
 del alist						    	# delete the list completely
 .clear()						    	# empties the list
 
+.count(element_to_count)					# returns the number of times element_to_count appears in a list
 .sort()                                                     	# mutates, returns nothing
 sorted(a_List)                                              	# doesn't mutate
 .reverse()                                                  	# mutates
 .join(a_List)                                               	# doesn't mutate, returns string; ie. s=['a','b','c']; '_'.join(s);->'a_b_c'
 .split('some_string')                                       	# returns list, doesn't mutate; ie. s='ab>qcd'; s.split('>');->['ab','qcd']
+
 
 # ADD LIST ELEMENT #
 .append(something)					    	# appends element at the end of the list. mutates, returns nothing
