@@ -22,7 +22,9 @@ ex. ls -a; -a is a option
 
 
 echo Hello world						# print string in the terminal
-ls > /path/to/file/filename					# save something as text
+echo "your text here" >> filename.txt				# saves texts in a file specified
+ls > /path/to/file/<filename>					# save something as text
+
 
 
 
@@ -30,12 +32,18 @@ ls > /path/to/file/filename					# save something as text
 ### PROCESS ###
 
 watch free -h							# check performance
-service <name of the app> <start, stop, restart, status>	# i.e service ssh start
-service --status-all						# list of runing services
+service <name of the app> <start, stop, restart, status>	# i.e. service ssh start
+service --status-all						# list of running services
 ps aux								# all process list
+or
+ps aux | grep feature_server.py					# This command will list all processes containing feature_server.py.
 ps -e								# every process
-killall <program_name>						# i.e $killall firefox; killes all firefox process
-kill <pid>							# killes process
+killall <program_name>						# i.e. $killall Firefox; kills all Firefox process
+kill <pid>							# kills process
+pkill -f feature_server.py			
+
+
+python3 filename.py &						# & is used to run a service in background
 
 ### CRONJOB ###
 ps -ax|grep cron						# cronjobs process list
@@ -45,7 +53,7 @@ crontab -l							# lists cronjobs
 
 
 
-### VIM COMMAND ###
+### VIM EDITOR COMMAND ###
 
 :wq                                 # to save and exit
 :q!                                 # to trash all changes
@@ -138,6 +146,7 @@ df						# Check File System Disk Space Usage
 df -h						# Check File System Disk Space Usage -h, --human-readable; -k=kilobyte, -m=megabyte, -h=all file system statistics in GB (Gigabyte)
 du						# disk usage
 du -h						# disk usage , -h, --human-readable, The -h flag prints size outputs
+du -sh -- */				#  display the size of each folder in the current directory, excluding the sizes of any subdirectories within them
 du -time					# It shows the time of the last modification to any file in the directory or subdirectory
 du -a						# disk usage,  It lists the sizes of all files and directories in the given file path. often combined with -h; du -ah
 du -s						# disk usage, -s, --summarize
@@ -232,16 +241,22 @@ cat /etc/shadow					# View the created users in the shadow file
 apt-get update
 apt-get remove
 sudo apt-get autoremove					# The autoremove option removes packages that were automatically installed because some other package required them but, with those other packages removed, they are no longer needed.
+
+#cleaning
+sudo apt-get clean
+sudo apt-get autoremove
+sudo apt-get autoclean
+
 sudo apt update & sudo apt upgrade              	# update package manager
-apt list --upgradable					# see upgradeable list
-sudo apt full-upgrade					#upgrade the system by removing/installing/upgrading packages
-apt list --upgradable					# check upgradable package
+apt list --upgradable								# see upgradeable list
+sudo apt full-upgrade								#upgrade the system by removing/installing/upgrading packages
+apt list --upgradable								# check upgradable package
 # INSTALL #
 which <name of the package>                     	# check if package is installed
 apt search <name of the package>                	# i.e $apt search firefox (better than apt-cache)
 sudo apt-cache search <name of the package>     	# i.e $sudo apt-cache search firefox
-sudo apt install <name of the package>			# install packages
-sudo apt reinstall <name of the package>		# reinstallpackages
+sudo apt install <name of the package>				# install packages
+sudo apt reinstall <name of the package>			# reinstallpackages
 # UNINSTALL #
 sudo apt remove <name of the package>           	# i.e $sudo apt remove firefox
 
@@ -363,6 +378,32 @@ sudo apt install python3-pip				# enabling pip
 
 
 
+### EXECUTE TASK in BACKGROUND ###
+your_command &								# Using the Ampersand (&)
+nohup your_command &						# The nohup command allows a process to continue running even after log out
+
+*If already started a process and want to move it to the background, can use Ctrl+Z to stop it, then bg to resume it in the background, and finally disown to detach it from the terminal
+your_command
+# Press Ctrl+Z
+bg
+disown
+
+*To execute multiple scripts in the background using nohup and store the logs in separate files
+Ex.
+nohup ./script1.sh > script1.log 2>&1 &
+nohup ./script2.sh > script2.log 2>&1 &
+nohup ./script3.sh > script3.log 2>&1 &
+
+Explanation
+•  nohup: Runs the command even after you log out.
+
+•  ./script1.sh: The script you want to run.
+
+•  > script1.log: Redirects the standard output (stdout) to script1.log.
+
+•  2>&1: Redirects the standard error (stderr) to the same file descriptor as stdout.
+
+•  &: Runs the command in the background.
 
 
 
@@ -372,6 +413,8 @@ sudo apt install python3-pip				# enabling pip
 
 
 
+### GUP ###
+nvidia-smi					# This will display a list of processes using the GPU along with their usage statistics
 
 
 

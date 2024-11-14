@@ -52,6 +52,9 @@ virtualenv venv_or_any_name
 python -m venv venv
 cd venv_or_any_name\Scripts\activate(or activate.bat)
 deactivate #for deactivating from anywhere
+# ON LINUX
+source venv/bin/activate
+
 
 ### METHOD 2 ###
 cd project_directory
@@ -61,6 +64,10 @@ project_directory> cd name_of_venv\Scripts
 Scripts>activate.bat
 deactivate #for deactivating from anywhere
 
+
+# TO DELETE VENV
+deactivate
+rm -rf venv
 
 
 

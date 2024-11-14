@@ -8,9 +8,9 @@ pound-bang, or hash-pling.
 
 #!/usr/bin/env python3
 
-chmod +x <name_of_the_python_script>	# making the python script excecuteable
+chmod +x <name_of_the_python_script>	# making the python script executable
 
-./<name_of_the_python_script>		# will execute the python script without writing python3 .... everytime
+./<name_of_the_python_script>		# will execute the python script without writing python3 .... every time
 
 ### INTERACTIVE SHELL ###
 py -i name.py
@@ -25,7 +25,7 @@ sys.platform
 type(arg)                                                  	# returns file type
 len(arg)						   	# returns length of given arg
 time.process_time()					   	# import time; returns float value of time in seconds.
-map(function, iterables)				   	# executes a specified function for each item in a iterable. The item is sent to the function as a parameter; function - Required. The function to execute for each item; iterable	Required. A sequence, collection or an iterator object. You can send as many iterables as you like, just make sure the function has one parameter for each iterable
+map(function, iterables)				   	# executes a specified function for each item in a inerrable. The item is sent to the function as a parameter; function - Required. The function to execute for each item; inerrable	Required. A sequence, collection or an iterator object. You can send as many iterables as you like, just make sure the function has one parameter for each inerrable
 eval(expression, globals, locals)			   	# evaluates the specified expression, if the expression is a legal Python statement, it will be executed; expression - A String, that will be evaluated as Python code; globals - Optional. A dictionary containing global parameters; locals - Optional. A dictionary containing local parameters
 enumerate(iterable, start=0)					#
 print('', sep='\n')					   	# by default sep=' '; sep parameter in print(); print('G','F','G', sep=''); >>GFG; print('09','12','2016', sep='-'); >>09-12-2016; 
