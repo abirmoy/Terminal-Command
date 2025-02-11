@@ -55,6 +55,7 @@ crontab -l							# lists cronjobs
 
 ### VIM EDITOR COMMAND ###
 
+wc-l filename.ext					# number of lines in a text file
 :wq                                 # to save and exit
 :q!                                 # to trash all changes
 SHIFT I                             # to insert
@@ -128,10 +129,13 @@ ls                                              # list of files and folders
 ls -a                                           # list along with hidden files
 ls -all                                         # list along with permission type
 ls -lh						# list of files and folders with size in K,M,G (default is byte)
+ll
 cat [options] filename				# view file not recommended for large file
 head [options] filename				# head of a file ex. 
 head -n numberOfLine filename			# head -n 5 filename.txt
 tail [options] filename				# last n number of line
+sed -n '514p' yourfile.txt			# view a specific line, such as the 514th line, in a text file on Linux; '514p' instructs sed to print only the 514th lin
+find . -name "filename.py"						# If the file isn’t in the current directory, search for it in the broader project folder
 
 
 
@@ -379,6 +383,15 @@ sudo apt install python3-pip				# enabling pip
 
 
 ### EXECUTE TASK in BACKGROUND ###
+
+1. USING SCREEN
+screen										# Start a new screen session
+screen -ls									# List all screen sessions
+Ctrl-a d									# Detach from the current screen session (leave it running in the background
+screen -r [session_id]						# Reattach to a screen session
+exit										# Terminate a screen session
+
+2. USING NOHUP
 your_command &								# Using the Ampersand (&)
 nohup your_command &						# The nohup command allows a process to continue running even after log out
 
